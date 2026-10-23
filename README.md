@@ -4,6 +4,12 @@ Prototipo personal de **Ignacio Pizarro Hurtado**, Ingeniero Civil Industrial. P
 
 **Proyecto independiente, sin afiliación, patrocinio ni aprobación de ARAUCO.** No contiene información interna de empresas ni material de otros proyectos. Es un trabajo de portafolio; no acredita experiencia de implementación en una operación forestal.
 
+## Demostración real
+
+![Consulta semántica real con página y fuente](docs/media/forestrag-consulta-real.jpg)
+
+Captura del prototipo local consultando el PDF FAO; no es un diseño simulado.
+
 ## Qué funciona hoy
 
 | Estado | Funcionalidad |

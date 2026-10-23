@@ -32,5 +32,7 @@
     ],
     "conclusion": "success",
     "scope": "offline suite and lexical demo; no semantic weights in CI"
-  }
+  },
+  "real_browser_query_verified": true,
+  "screenshot": "docs/media/forestrag-consulta-real.jpg"
 }
