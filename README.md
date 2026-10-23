@@ -6,6 +6,18 @@ Prototipo personal de **Ignacio Pizarro Hurtado**, Ingeniero Civil Industrial. P
 
 ## Demostración real
 
+**Continuidad FREG-CRITICAL-001 (23-10-2026):** el estado reconciliado está en
+[FORESTRAG_ESTADO_MAESTRO_Y_CONTINUIDAD.md](FORESTRAG_ESTADO_MAESTRO_Y_CONTINUIDAD.md).
+Los resultados de 40 pruebas y métricas siguientes corresponden al incremento histórico.
+El nuevo laboratorio sintético incorpora credenciales revocables y autorización SQL antes
+de recuperar; no convierte esta interfaz pública en un sistema empresarial.
+Guía ejecutable: [docs/security-lab.md](docs/security-lab.md).
+
+La publicación aprobada de esta rama excluye el ZIP histórico de auditoría. Se
+conserva en la entrega descargable del propietario; ver [registro](docs/history/README.md).
+La suite pública de contratos y el laboratorio no necesitan ese archivo. Los
+scripts opcionales de regresión histórica/receipt sí requieren la copia local.
+
 ![Consulta semántica real con página y fuente](docs/media/forestrag-consulta-real.jpg)
 
 Captura del prototipo local consultando el PDF FAO; no es un diseño simulado.
@@ -20,7 +32,8 @@ Captura del prototipo local consultando el PDF FAO; no es un diseño simulado.
 | IMPLEMENTADO Y PROBADO | CLI, demo léxica sin descarga de modelos e interfaz Streamlit; 40 pruebas locales incluidas integración semántica y AppTest. |
 | IMPLEMENTADO, VALIDACIÓN PARCIAL | Adaptador Ollama local: contrato probado con transporte simulado. No se ejecutó inferencia generativa real. |
 | EN DESARROLLO | Recuperación de evidencia completa por fragmento y calibración de abstención. |
-| PLANIFICADO | Más corpus autorizado, evaluación reservada, generación real, fundamentación humana y controles multiusuario. |
+| LABORATORIO SINTÉTICO SEPARADO | Identidad de prueba, permisos por recurso, organización/área/proyecto, descargas autorizadas, cuotas e historial aislado. Ver informe FREG-CRITICAL-001. |
+| PENDIENTE | Más corpus autorizado, generación real, fundamentación humana, SSO/MFA y controles empresariales. |
 
 **El modo actual muestra pasajes recuperados. No se presenta como un RAG generativo completo validado.** No es un sistema de seguridad operacional certificado ni sustituye manuales o decisiones de profesionales autorizados.
 
@@ -126,9 +139,13 @@ Texto bajo CC BY 4.0; página física 2 revisada. Se usa texto de páginas físi
 
 Código y material ficticio original bajo [MIT](LICENSE). Pesos, publicaciones y dependencias mantienen sus propias licencias.
 
-## Próximo paso de mayor impacto
+## Próximo paso de mayor impacto (plan histórico)
 
 Mejorar recuperación de fragmentos completos y evaluarla con preguntas nuevas reservadas. Después ejecutar y evaluar un LLM local, manteniendo visibles las abstenciones y la procedencia. La credibilidad de la evidencia tiene prioridad sobre ampliar funciones.
+
+La secuencia vigente se integra sin borrar este antecedente en
+[FORESTRAG_PLAN_MAESTRO_INTEGRADO.md](FORESTRAG_PLAN_MAESTRO_INTEGRADO.md).
+Los índices schema 1 deben reconstruirse explícitamente; no se migran silenciosamente.
 
 ## Descripción profesional
 

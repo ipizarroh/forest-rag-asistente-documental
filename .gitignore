@@ -1,4 +1,7 @@
 .venv/
+.venv-lab/
+# Archivo histórico conservado en la entrega privada; excluido de publicación pública.
+docs/history/EVIDENCIAS_AUDITORIA_FORESTRAG.zip
 __pycache__/
 *.py[cod]
 .pytest_cache/

@@ -1,0 +1,1114 @@
+[
+  {
+    "id": "PY-001",
+    "requirement": "Regresión funcional original: tests/test_app.py",
+    "scenario": "test_query_ui_uses_real_local_index",
+    "expected": [
+      "not app.exception",
+      "not app.exception",
+      "any(('No es una respuesta generada' in str(x.value) for x in app.markdown))",
+      "len(app.expander) >= 1"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_app.py::test_query_ui_uses_real_local_index; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.185
+  },
+  {
+    "id": "PY-002",
+    "requirement": "Regresión funcional original: tests/test_app.py",
+    "scenario": "test_missing_index_is_explained",
+    "expected": [
+      "not app.exception and len(app.warning) == 1"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_app.py::test_missing_index_is_explained; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.152
+  },
+  {
+    "id": "PY-003",
+    "requirement": "F02",
+    "scenario": "test_f02_tampered_index_fails_closed[payload]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f02_tampered_index_fails_closed[payload]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.01
+  },
+  {
+    "id": "PY-004",
+    "requirement": "F02",
+    "scenario": "test_f02_tampered_index_fails_closed[swap]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f02_tampered_index_fails_closed[swap]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.01
+  },
+  {
+    "id": "PY-005",
+    "requirement": "F02",
+    "scenario": "test_f02_tampered_index_fails_closed[scale]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f02_tampered_index_fails_closed[scale]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.011
+  },
+  {
+    "id": "PY-006",
+    "requirement": "F02",
+    "scenario": "test_f02_tampered_index_fails_closed[delete]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f02_tampered_index_fails_closed[delete]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.01
+  },
+  {
+    "id": "PY-007",
+    "requirement": "F06",
+    "scenario": "test_f06_missing_metadata_is_domain_error",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f06_missing_metadata_is_domain_error; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.008
+  },
+  {
+    "id": "PY-008",
+    "requirement": "OLD",
+    "scenario": "test_old_schema_requires_explicit_rebuild",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_old_schema_requires_explicit_rebuild; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.008
+  },
+  {
+    "id": "PY-009",
+    "requirement": "F04",
+    "scenario": "test_f04_empty_page_selection_is_not_whole_document",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f04_empty_page_selection_is_not_whole_document; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-010",
+    "requirement": "F06",
+    "scenario": "test_f06_malformed_pdf_translated",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f06_malformed_pdf_translated; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-011",
+    "requirement": "F07",
+    "scenario": "test_f07_newline_does_not_bypass_conservative_filter",
+    "expected": [
+      "risky_request('desactivar\\nprotecciones de seguridad')"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f07_newline_does_not_bypass_conservative_filter; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.0
+  },
+  {
+    "id": "PY-012",
+    "requirement": "F09",
+    "scenario": "test_f09_cloud_tag_rejected_without_connection",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f09_cloud_tag_rejected_without_connection; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-013",
+    "requirement": "F06",
+    "scenario": "test_f06_ollama_envelope_array_is_controlled_error",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f06_ollama_envelope_array_is_controlled_error; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-014",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_abstention_without_evidence_never_calls_llm",
+    "expected": [
+      "extractive_answer([])['message'] == NO_EVIDENCE",
+      "ollama_answer('datos', [])['abstained']"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_abstention_without_evidence_never_calls_llm; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.0
+  },
+  {
+    "id": "PY-015",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_untrusted_context_separated",
+    "expected": [
+      "len(messages) == 2 and messages[0]['role'] == 'system'",
+      "sample[0].text not in messages[0]['content']",
+      "json.loads(messages[1]['content'])['untrusted_document_context'][0]['id'] == sample[0].id"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_untrusted_context_separated; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-016",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_invalid_citations_fail_closed[payload0]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_invalid_citations_fail_closed[payload0]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-017",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_invalid_citations_fail_closed[payload1]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_invalid_citations_fail_closed[payload1]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-018",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_invalid_citations_fail_closed[payload2]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_invalid_citations_fail_closed[payload2]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-019",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_invalid_citations_fail_closed[payload3]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_invalid_citations_fail_closed[payload3]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-020",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_invalid_citations_fail_closed[payload4]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_invalid_citations_fail_closed[payload4]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-021",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_ollama_contract_with_simulated_transport",
+    "expected": [
+      "result['claims'] == [claim]",
+      "not result['abstained']",
+      "request.full_url == 'http://127.0.0.1:11434/api/chat'",
+      "body['stream'] is False and 'tools' not in body"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_ollama_contract_with_simulated_transport; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-022",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_risky_operations_redirected[C\\xf3mo desactivar las protecciones de seguridad]",
+    "expected": [
+      "risky_request(question)"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_risky_operations_redirected[C\\xf3mo desactivar las protecciones de seguridad]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-023",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_risky_operations_redirected[Instrucciones paso a paso para operar una motosierra]",
+    "expected": [
+      "risky_request(question)"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_risky_operations_redirected[Instrucciones paso a paso para operar una motosierra]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.0
+  },
+  {
+    "id": "PY-024",
+    "requirement": "Regresión funcional original: tests/test_generation_evaluation.py",
+    "scenario": "test_evaluation_metrics_use_expected_pages",
+    "expected": [
+      "report['case_count'] == 2 and report['hit_at_k'] == 1",
+      "report['unanswerable_abstention_rate'] == 1",
+      "report['cases'][0]['elapsed_ms'] >= 0"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_evaluation_metrics_use_expected_pages; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.008
+  },
+  {
+    "id": "PY-025",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_registered_text_and_hash",
+    "expected": [
+      "pages[0].text == 'Documentación forestal española.'",
+      "pages[0].source.sha256 == source.sha256"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_registered_text_and_hash; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.002
+  },
+  {
+    "id": "PY-026",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_manifest_rejects_unapproved_source[changes0]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_unapproved_source[changes0]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-027",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_manifest_rejects_unapproved_source[changes1]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_unapproved_source[changes1]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-028",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_manifest_rejects_unapproved_source[changes2]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_unapproved_source[changes2]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-029",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_manifest_rejects_unapproved_source[changes3]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_unapproved_source[changes3]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-030",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_manifest_rejects_unapproved_source[changes4]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_unapproved_source[changes4]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-031",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_manifest_rejects_duplicate_sources",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_duplicate_sources; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-032",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_directory_escape_blocked",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_directory_escape_blocked; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-033",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_file_limits_and_signature",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_file_limits_and_signature; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.002
+  },
+  {
+    "id": "PY-034",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_scanned_empty_pdf_fails_explicitly",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_scanned_empty_pdf_fails_explicitly; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.002
+  },
+  {
+    "id": "PY-035",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_real_pdf_extraction_preserves_page",
+    "expected": [
+      "len(pages) == 1 and pages[0].number == 2",
+      "'Inventario' in pages[0].text"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_real_pdf_extraction_preserves_page; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.003
+  },
+  {
+    "id": "PY-036",
+    "requirement": "Regresión funcional original: tests/test_ingestion.py",
+    "scenario": "test_no_unapproved_direct_ingestion",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_no_unapproved_direct_ingestion; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-037",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_normalization",
+    "expected": [
+      "normalize('conser-\\nvación \\n  forestal\\x00') == 'conservación forestal'"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_normalization; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.0
+  },
+  {
+    "id": "PY-038",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_chunks_stay_on_page_and_stable",
+    "expected": [
+      "{c.page for c in chunks} == {1, 2}",
+      "len({c.id for c in chunks}) == len(chunks)",
+      "chunks == chunk_pages(pages, max_words=8, overlap=2)",
+      "chunks[0].id != chunk_pages([replace(pages[0], source=replace(source, sha256='1' * 64))], 8, 2)[0].id"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_chunks_stay_on_page_and_stable; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-039",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_token_budget_and_coverage",
+    "expected": [
+      "all((len(c.text.split()) <= 7 for c in chunks))",
+      "set(' '.join((c.text for c in chunks)).split()) == set(text.split())"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_token_budget_and_coverage; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-040",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_invalid_chunk_parameters[0-0]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_invalid_chunk_parameters[0-0]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-041",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_invalid_chunk_parameters[4-4]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_invalid_chunk_parameters[4-4]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-042",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_invalid_chunk_parameters[4--1]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_invalid_chunk_parameters[4--1]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.001
+  },
+  {
+    "id": "PY-043",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_retrieval_roundtrip_and_page",
+    "expected": [
+      "hits[0].chunk.page == 1",
+      "hits[0].chunk.document_sha256 == '0' * 64",
+      "index_metadata(path)['embedder'] == embedder.id",
+      "not retrieve('astronomía galaxia júpiter', path, embedder, threshold=0.8)",
+      "not retrieve('mantenimiento', path, embedder, source_id='otra-fuente')"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_retrieval_roundtrip_and_page; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.008
+  },
+  {
+    "id": "PY-044",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_embedding_mismatch_and_dimensions",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_embedding_mismatch_and_dimensions; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.008
+  },
+  {
+    "id": "PY-045",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_atomic_index_preserved_on_invalid_write",
+    "expected": [
+      "path.read_bytes() == before"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_atomic_index_preserved_on_invalid_write; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.007
+  },
+  {
+    "id": "PY-046",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_bad_queries[]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_bad_queries[]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.006
+  },
+  {
+    "id": "PY-047",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_bad_queries[   ]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_bad_queries[   ]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.006
+  },
+  {
+    "id": "PY-048",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_bad_queries[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_bad_queries[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.008
+  },
+  {
+    "id": "PY-049",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_bad_queries[None]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_bad_queries[None]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.007
+  },
+  {
+    "id": "PY-050",
+    "requirement": "Regresión funcional original: tests/test_pipeline.py",
+    "scenario": "test_retrieval_limits",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_retrieval_limits; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.012
+  },
+  {
+    "id": "PY-051",
+    "requirement": "FORESTRAG SECURITY; AC01",
+    "scenario": "test_ac01_ac02_same_question_useful_different_permissions",
+    "expected": [
+      "docs(ops) == {'public', 'ops', 'injection'}",
+      "docs(hr) == {'public', 'hr'}",
+      "'PINO-101' in json.dumps(ops)",
+      "'NOMINA-FICTICIA-740' in json.dumps(hr)",
+      "docs(service.query(tokens['admin'], 'inventario')) == {'public'}"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac01_ac02_same_question_useful_different_permissions; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.06
+  },
+  {
+    "id": "PY-052",
+    "requirement": "FORESTRAG SECURITY; AC03",
+    "scenario": "test_ac03_ac11_sql_filters_before_payload_and_context",
+    "expected": [
+      "set(checked) == {'public', 'ops', 'injection'}",
+      "contexts and all((m[0]['role'] == 'system' for m in contexts))",
+      "forbidden not in json.dumps([result, contexts], ensure_ascii=False)"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac03_ac11_sql_filters_before_payload_and_context; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.051
+  },
+  {
+    "id": "PY-053",
+    "requirement": "FORESTRAG SECURITY; AC04",
+    "scenario": "test_ac04_ac05_direct_resource_access_denied[hr]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac04_ac05_direct_resource_access_denied[hr]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.052
+  },
+  {
+    "id": "PY-054",
+    "requirement": "FORESTRAG SECURITY; AC04",
+    "scenario": "test_ac04_ac05_direct_resource_access_denied[other]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac04_ac05_direct_resource_access_denied[other]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.047
+  },
+  {
+    "id": "PY-055",
+    "requirement": "FORESTRAG SECURITY; AC04",
+    "scenario": "test_ac04_ac05_direct_resource_access_denied[restricted]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac04_ac05_direct_resource_access_denied[restricted]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.061
+  },
+  {
+    "id": "PY-056",
+    "requirement": "FORESTRAG SECURITY; AC04",
+    "scenario": "test_ac04_ac05_direct_resource_access_denied[not-existent]",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac04_ac05_direct_resource_access_denied[not-existent]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.047
+  },
+  {
+    "id": "PY-057",
+    "requirement": "FORESTRAG SECURITY; AC06",
+    "scenario": "test_ac06_direct_and_indirect_injection_do_not_grant",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['ops'], question))",
+      "'injection' in docs(service.query(tokens['ops'], 'inventario'))",
+      "docs(service.query(tokens['admin'], 'inventario')) == {'public'}"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac06_direct_and_indirect_injection_do_not_grant; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.051
+  },
+  {
+    "id": "PY-058",
+    "requirement": "FORESTRAG SECURITY; AC07",
+    "scenario": "test_ac07_grant_revocation_affects_query_download_history",
+    "expected": [
+      "'hr' in docs(service.query(tokens['hr'], 'inventario'))",
+      "b'NOMINA' in service.download(tokens['hr'], 'hr')",
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))",
+      "all((row['doc'] != 'hr' for row in service.history(tokens['hr'])))"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac07_grant_revocation_affects_query_download_history; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.055
+  },
+  {
+    "id": "PY-059",
+    "requirement": "FORESTRAG SECURITY; AC07",
+    "scenario": "test_ac07_token_revocation_and_principal_disable",
+    "expected": [
+      "'ops' in docs(service.query(new_token, 'inventario'))"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac07_token_revocation_and_principal_disable; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.058
+  },
+  {
+    "id": "PY-060",
+    "requirement": "FORESTRAG SECURITY; AC08",
+    "scenario": "test_ac08_history_is_owner_scoped",
+    "expected": [
+      "any((row['doc'] == 'hr' for row in service.history(tokens['hr'])))",
+      "service.history(tokens['ops']) == []",
+      "all((row['doc'] != 'hr' for row in service.history(tokens['ops'])))"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac08_history_is_owner_scoped; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.053
+  },
+  {
+    "id": "PY-061",
+    "requirement": "FORESTRAG SECURITY; AC09",
+    "scenario": "test_ac09_rate_budget_survives_new_token_and_process",
+    "expected": [
+      "restarted.query(new_token, 'inventario')['passages']"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac09_rate_budget_survives_new_token_and_process; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.052
+  },
+  {
+    "id": "PY-062",
+    "requirement": "FORESTRAG SECURITY; AC09",
+    "scenario": "test_ac09_concurrent_requests_really_bounded",
+    "expected": [
+      "resume.wait(5)",
+      "future.result()['passages']",
+      "entered.wait(5)"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac09_concurrent_requests_really_bounded; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.052
+  },
+  {
+    "id": "PY-063",
+    "requirement": "FORESTRAG SECURITY; AC10",
+    "scenario": "test_ac10_audit_records_decisions_without_secrets_or_prompts",
+    "expected": [
+      "{row[2] for row in rows} >= {'allowed', 'denied', 'unauthenticated'}",
+      "all((hashlib.sha256(t.encode()).hexdigest() in {r[0] for r in sessions} for t in tokens.values()))",
+      "all((t not in repr(rows) for t in tokens.values()))",
+      "'PREGUNTA-CANARIO' not in repr(rows)",
+      "question.encode() not in service.path.read_bytes()"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac10_audit_records_decisions_without_secrets_or_prompts; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.055
+  },
+  {
+    "id": "PY-064",
+    "requirement": "FORESTRAG SECURITY; AC12",
+    "scenario": "test_ac12_delete_removes_access_context_and_history",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))",
+      "not any((r['doc'] == 'hr' for r in service.history(tokens['hr'])))",
+      "con.execute(\"SELECT count(*) FROM chunks WHERE doc='hr'\").fetchone()[0] == 0",
+      "con.execute(\"SELECT count(*) FROM grants WHERE doc='hr'\").fetchone()[0] == 0"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac12_delete_removes_access_context_and_history; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.06
+  },
+  {
+    "id": "PY-065",
+    "requirement": "FORESTRAG SECURITY; UPDATE",
+    "scenario": "test_update_revokes_old_evidence_and_grants",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))",
+      "not any((r['doc'] == 'hr' for r in service.history(tokens['hr'])))",
+      "'NUEVA-VERSION-FICTICIA' in json.dumps(result)",
+      "'NOMINA-FICTICIA-740' not in json.dumps(result)"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_update_revokes_old_evidence_and_grants; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.057
+  },
+  {
+    "id": "PY-066",
+    "requirement": "FORESTRAG SECURITY; ORG",
+    "scenario": "test_org_area_project_and_grant_are_all_required",
+    "expected": [
+      "'other' in docs(service.query(tokens['other'], 'inventario'))",
+      "'ops' not in docs(service.query(tokens['other'], 'inventario'))"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_org_area_project_and_grant_are_all_required; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.078
+  },
+  {
+    "id": "PY-067",
+    "requirement": "FORESTRAG SECURITY; UNKNOWN",
+    "scenario": "test_unknown_classification_and_restricted_fail_closed[restricted]",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_unknown_classification_and_restricted_fail_closed[restricted]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.049
+  },
+  {
+    "id": "PY-068",
+    "requirement": "FORESTRAG SECURITY; UNKNOWN",
+    "scenario": "test_unknown_classification_and_restricted_fail_closed[unknown]",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_unknown_classification_and_restricted_fail_closed[unknown]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.06
+  },
+  {
+    "id": "PY-069",
+    "requirement": "FORESTRAG SECURITY; UNKNOWN",
+    "scenario": "test_unknown_classification_and_restricted_fail_closed[]",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_unknown_classification_and_restricted_fail_closed[]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.048
+  },
+  {
+    "id": "PY-070",
+    "requirement": "FORESTRAG SECURITY; PUBLIC",
+    "scenario": "test_public_requires_explicit_publication",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_public_requires_explicit_publication; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.048
+  },
+  {
+    "id": "PY-071",
+    "requirement": "FORESTRAG SECURITY; EXPIRED",
+    "scenario": "test_expired_and_spoofed_identity_rejected",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_expired_and_spoofed_identity_rejected; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.057
+  },
+  {
+    "id": "PY-072",
+    "requirement": "FORESTRAG SECURITY; APPLICATION",
+    "scenario": "test_application_credential_capabilities_separate",
+    "expected": [
+      "'ops' in docs(service.query(tokens['app'], 'inventario'))"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_application_credential_capabilities_separate; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.054
+  },
+  {
+    "id": "PY-073",
+    "requirement": "FORESTRAG SECURITY; CORRUPT",
+    "scenario": "test_corrupt_authorized_payload_and_document_rejected",
+    "expected": [
+      "'hr' in docs(service.query(tokens['hr'], 'inventario'))"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_corrupt_authorized_payload_and_document_rejected; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.051
+  },
+  {
+    "id": "PY-074",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_real_auth_query_download_and_no_store",
+    "expected": [
+      "api('POST', '/query', body={'question': 'inventario'})[0] == 401",
+      "status == 200 and 'ops' in docs(json.loads(raw))",
+      "headers['Cache-Control'] == 'no-store'",
+      "api('GET', '/documents/ops', user='ops')[0] == 200",
+      "forbidden[0] == missing[0] == 404 and forbidden[2] == missing[2]",
+      "api('GET', '/documents/hr')[0] == 401"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_real_auth_query_download_and_no_store; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.57
+  },
+  {
+    "id": "PY-075",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_rejects_identity_in_body_and_oversized_input[body0]",
+    "expected": [
+      "api('POST', '/query', user='ops', body=body)[0] == 400"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_rejects_identity_in_body_and_oversized_input[body0]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.558
+  },
+  {
+    "id": "PY-076",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_rejects_identity_in_body_and_oversized_input[body1]",
+    "expected": [
+      "api('POST', '/query', user='ops', body=body)[0] == 400"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_rejects_identity_in_body_and_oversized_input[body1]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.548
+  },
+  {
+    "id": "PY-077",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_rejects_identity_in_body_and_oversized_input[body2]",
+    "expected": [
+      "api('POST', '/query', user='ops', body=body)[0] == 400"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_rejects_identity_in_body_and_oversized_input[body2]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.562
+  },
+  {
+    "id": "PY-078",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_rejects_identity_in_body_and_oversized_input[body3]",
+    "expected": [
+      "api('POST', '/query', user='ops', body=body)[0] == 400"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_rejects_identity_in_body_and_oversized_input[body3]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.551
+  },
+  {
+    "id": "PY-079",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_no_alternate_unprotected_channel[/documents/../hr]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/documents/../hr]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.558
+  },
+  {
+    "id": "PY-080",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_no_alternate_unprotected_channel[/documents/%68r]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/documents/%68r]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.565
+  },
+  {
+    "id": "PY-081",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_no_alternate_unprotected_channel[/index]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/index]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.575
+  },
+  {
+    "id": "PY-082",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_no_alternate_unprotected_channel[/export]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/export]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.557
+  },
+  {
+    "id": "PY-083",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_no_alternate_unprotected_channel[/query?token=ops]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/query?token=ops]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.555
+  },
+  {
+    "id": "PY-084",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_no_alternate_unprotected_channel[/history?user=hr]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/history?user=hr]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.556
+  },
+  {
+    "id": "PY-085",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_no_alternate_unprotected_channel[/admin/grants]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/admin/grants]; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.546
+  },
+  {
+    "id": "PY-086",
+    "requirement": "FORESTRAG SECURITY; HTTP",
+    "scenario": "test_http_origin_and_host_validation",
+    "expected": [
+      "api('GET', '/history', user='ops', headers={'Origin': 'https://evil.invalid'})[0] == 403",
+      "api('GET', '/history', user='ops', headers={'Host': 'evil.invalid'})[0] == 403"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_origin_and_host_validation; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.549
+  },
+  {
+    "id": "PY-087",
+    "requirement": "FORESTRAG SECURITY; SERVER",
+    "scenario": "test_server_refuses_network_bind",
+    "expected": [
+      "El escenario completa sus aserciones/raises sin fallo."
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_server_refuses_network_bind; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 0.044
+  },
+  {
+    "id": "PY-088",
+    "requirement": "Regresión funcional original: tests/test_semantic_integration.py",
+    "scenario": "test_real_pdf_and_pinned_multilingual_model",
+    "expected": [
+      "built['dimensions'] == 384 and built['pages'] == 2",
+      "hits and hits[0].chunk.page == 47",
+      "any(('defectos' in hit.chunk.text for hit in hits))",
+      "len(hits[0].chunk.document_sha256) == 64"
+    ],
+    "observed": "Pytest ejecutó el caso sin fallo.",
+    "status": "PASS",
+    "evidence": "tests/test_semantic_integration.py::test_real_pdf_and_pinned_multilingual_model; reports/freg001/full-suite.xml",
+    "elapsed_seconds": 3.322
+  }
+]

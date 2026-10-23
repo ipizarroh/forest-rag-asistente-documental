@@ -38,6 +38,8 @@ def load_sources(manifest: Path) -> list[Source]:
 def read_source(source: Source, raw_dir: Path) -> list[Page]:
     if source.reuse_authorized is not True:
         raise ValueError("Fuente no autorizada.")
+    if source.pages is not None and (not isinstance(source.pages, list) or not source.pages):
+        raise ValueError("Selección de páginas inválida: use null explícito para todas.")
     base = raw_dir.resolve()
     path = (base / source.file).resolve()
     if not path.is_relative_to(base) or not path.is_file():
@@ -51,12 +53,16 @@ def read_source(source: Source, raw_dir: Path) -> list[Page]:
         if path.read_bytes()[:5] != b"%PDF-":
             raise ValueError("La firma del archivo no corresponde a un PDF.")
         from pypdf import PdfReader
-        reader = PdfReader(path)
+        from pypdf.errors import PdfReadError
+        try:
+            reader = PdfReader(path)
+        except PdfReadError as exc:
+            raise ValueError("PDF inválido o incompleto.") from exc
         if reader.is_encrypted:
             raise ValueError("No se aceptan PDF cifrados.")
         if len(reader.pages) > MAX_PAGES:
             raise ValueError("PDF demasiado extenso para este prototipo.")
-        selected = source.pages or list(range(1, len(reader.pages) + 1))
+        selected = source.pages if source.pages is not None else list(range(1, len(reader.pages) + 1))
         if any(type(n) is not int or n < 1 or n > len(reader.pages) for n in selected):
             raise ValueError("Selección de páginas inválida.")
         labels = reader.page_labels

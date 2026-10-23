@@ -1,0 +1,51 @@
+{
+  "transport": "HTTP/socket real en loopback, servidor y cliente en una ejecución",
+  "results": [
+    {
+      "identity_ficticia": "ops",
+      "status": 200,
+      "documents": [
+        "injection",
+        "ops",
+        "public"
+      ]
+    },
+    {
+      "identity_ficticia": "hr",
+      "status": 200,
+      "documents": [
+        "hr",
+        "public"
+      ]
+    },
+    {
+      "identity_ficticia": "admin",
+      "status": 200,
+      "documents": [
+        "public"
+      ]
+    },
+    {
+      "identity_ficticia": "other",
+      "status": 200,
+      "documents": [
+        "other",
+        "public"
+      ]
+    },
+    {
+      "identity_ficticia": "app",
+      "status": 200,
+      "documents": [
+        "injection",
+        "ops",
+        "public"
+      ]
+    },
+    {
+      "scenario": "descarga hr como ops",
+      "status": 404,
+      "contains_confidential_canary": false
+    }
+  ]
+}

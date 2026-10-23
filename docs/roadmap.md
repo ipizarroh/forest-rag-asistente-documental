@@ -2,6 +2,10 @@
 
 Horizonte orientativo, sin ejecución automática prometida.
 
+Antecedente conservado. Desde FREG-CRITICAL-001, consultar el
+[plan integrado vigente](../FORESTRAG_PLAN_MAESTRO_INTEGRADO.md), que conserva estas
+etapas e integra A1–A5 del plan recuperado y la línea transversal de seguridad.
+
 | Días | Trabajo | Criterio de salida |
 |---|---|---|
 | 1–3 | Fundación | Repositorio, arquitectura, licencias y manifiesto. |

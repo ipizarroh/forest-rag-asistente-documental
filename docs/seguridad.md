@@ -2,6 +2,11 @@
 
 Aplicación individual en loopback con corpus público revisado. Sin autenticación ni permisos por documento: no exponer como servicio multiusuario con datos privados.
 
+Esta descripción corresponde a CLI/Streamlit originales. El laboratorio aislado de
+FREG-CRITICAL-001 sí implementa autorización de prueba; ver
+[diseño y límites](../FORESTRAG_ACCESS_CONTROL_DESIGN.md) y
+[guía](security-lab.md). Ningún documento privado debe conectarse al índice original.
+
 | Riesgo | Control implementado | Límite |
 |---|---|---|
 | Filtración | Sin claves; .env, datos y pesos excluidos de Git; corpus explícito. | Revisar contenido antes de publicar. |

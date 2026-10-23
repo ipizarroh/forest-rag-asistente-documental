@@ -23,7 +23,7 @@ def risky_request(question: str) -> bool:
     return bool(re.search(
         r"(desactiv|anul|puentea|salt[ae]r).{0,50}(seguridad|protecci|bloqueo)|"
         r"(paso a paso|instrucciones).{0,70}(motosierra|tala|incendio|maquinaria)",
-        question, flags=re.I,
+        " ".join(question.split()), flags=re.I,
     ))
 
 
@@ -74,7 +74,7 @@ def ollama_answer(question: str, hits: list[Hit]) -> dict:
     if not hits:
         return {"mode": "ollama", "abstained": True, "message": NO_EVIDENCE, "claims": []}
     model = os.environ.get("FORESTRAG_OLLAMA_MODEL", "qwen2.5:3b")
-    if not re.fullmatch(r"[\w.:-]{1,100}", model):
+    if not re.fullmatch(r"[\w.:-]{1,100}", model) or "cloud" in model.lower():
         raise ValueError("Nombre de modelo local inválido.")
     schema = {"type": "object", "properties": {"claims": {"type": "array", "items": {
         "type": "object", "properties": {"text": {"type": "string"}, "citations": {
@@ -102,7 +102,7 @@ def ollama_answer(question: str, hits: list[Hit]) -> dict:
             raise ValueError("Respuesta generativa demasiado extensa.")
         envelope = json.loads(raw)
         claims = validate_claims(json.loads(envelope["message"]["content"]), hits)
-    except (OSError, urllib.error.URLError, KeyError, json.JSONDecodeError) as exc:
+    except (OSError, urllib.error.URLError, KeyError, TypeError, json.JSONDecodeError) as exc:
         raise RuntimeError("Ollama local no está disponible o devolvió un formato inválido.") from exc
     return {"mode": "ollama", "model": model, "abstained": not bool(claims), "claims": claims,
             "message": NO_EVIDENCE if not claims else "Respuesta experimental: verifique las fuentes."}

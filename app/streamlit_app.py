@@ -13,6 +13,7 @@ st.set_page_config(page_title="ForestRAG", page_icon="🌲", layout="wide")
 st.title("ForestRAG")
 st.caption("Asistente Documental Forestal · Prototipo personal de Ignacio Pizarro Hurtado")
 st.info("Proyecto independiente, sin afiliación ni respaldo de ARAUCO. Consulte siempre las fuentes oficiales.")
+st.caption("Esta interfaz consulta sólo corpus público revisado. El laboratorio de permisos usa una API local separada.")
 st.markdown("### Consulta documental")
 index = Path(os.environ.get("FORESTRAG_INDEX", "data/forest.db"))
 try:
