@@ -26,7 +26,7 @@ Prototipo personal de **Ignacio Pizarro Hurtado**, Ingeniero Civil Industrial. P
 - Sólo **4/6** consultas recuperaron todos los términos de referencia. TreeGOER y privacidad mostraron evidencia incompleta. Recuperar la página correcta no equivale a disponer de toda la respuesta.
 - Resultados: [evaluación](docs/evaluation_results.json), [interpretación y reproducción](docs/evaluacion.md), [pruebas](docs/test_results.json).
 
-La muestra es pequeña y se diseñó conociendo el corpus. Estos resultados no estiman precisión general, productividad ni calidad de un LLM. CI está configurada en [GitHub Actions](../../actions); su estado debe comprobarse en cada ejecución.
+La muestra es pequeña y se diseñó conociendo el corpus. Estos resultados no estiman precisión general, productividad ni calidad de un LLM. GitHub Actions pasó en Python 3.11 y 3.12 para el primer commit funcional. La instalación limpia también pasó las 40 pruebas locales. CI está configurada en [GitHub Actions](https://github.com/ipizarroh/forest-rag-asistente-documental/actions); su estado debe comprobarse en cada ejecución.
 
 ## Instalación
 

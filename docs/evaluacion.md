@@ -44,3 +44,7 @@ Para incluir integración, activar FORESTRAG_RUN_INTEGRATION=1 y ejecutar pytest
 
 Ejecutar un modelo local y revisar cada afirmación contra los fragmentos, medir citas correctas, respuestas insuficientemente respaldadas y abstenciones. Incluir documentos con instrucciones maliciosas, versiones contradictorias y preguntas cercanas al tema cuya respuesta no esté en el corpus.
 
+
+## Instalación independiente y CI
+
+Se repitieron las 40 pruebas en un venv limpio, sin paquetes del entorno base: 40/40 y pip check sin dependencias rotas. GitHub Actions pasó en Linux con Python 3.11 y 3.12 para el commit funcional 8aea2a8deab084391235147c9d2dc574546f5b73. [Ejecución comprobada](https://github.com/ipizarroh/forest-rag-asistente-documental/actions/runs/39889677003). La suite remota excluye la integración semántica; ésta se ejecutó localmente con pesos reales.

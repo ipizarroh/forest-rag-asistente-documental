@@ -14,6 +14,23 @@
   "streamlit_apptest_cases": 2,
   "ollama_contract": "simulated transport; no real generative inference",
   "dependency_compatibility": "python -m pip check: No broken requirements found",
-  "ci": "Workflow configured; inspect actual GitHub Actions runs for current remote status"
+  "ci": "Workflow configured; inspect actual GitHub Actions runs for current remote status",
+  "clean_environment_validation": {
+    "passed": 40,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 7.58,
+    "system_site_packages": false,
+    "compatibility": "pip check: No broken requirements found"
+  },
+  "github_actions": {
+    "commit": "8aea2a8deab084391235147c9d2dc574546f5b73",
+    "run": "https://github.com/ipizarroh/forest-rag-asistente-documental/actions/runs/39889677003",
+    "python_versions": [
+      "3.11",
+      "3.12"
+    ],
+    "conclusion": "success",
+    "scope": "offline suite and lexical demo; no semantic weights in CI"
+  }
 }
-
