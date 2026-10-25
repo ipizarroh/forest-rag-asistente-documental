@@ -6,6 +6,12 @@ from collections.abc import Callable
 from .models import Chunk, Page
 
 
+def chunk_identity(source_id: str, document_sha256: str, page: int,
+                   start_word: int, text: str) -> str:
+    identity = f"{source_id}:{document_sha256}:{page}:{start_word}:{text}"
+    return hashlib.sha256(identity.encode()).hexdigest()[:24]
+
+
 def normalize(text: str) -> str:
     text = unicodedata.normalize("NFKC", text).replace("\x00", "")
     text = re.sub(r"(?<=\w)-\s*\n\s*(?=\w)", "", text)
@@ -29,9 +35,8 @@ def chunk_pages(pages: list[Page], max_words: int = 55, overlap: int = 10,
                 if end == start:
                     raise ValueError("Una palabra excede el límite de tokens del modelo.")
             text = " ".join(words[start:end])
-            identity = f"{page.source.id}:{page.source.sha256}:{page.number}:{start}:{text}"
             chunks.append(Chunk(
-                id=hashlib.sha256(identity.encode()).hexdigest()[:24],
+                id=chunk_identity(page.source.id, page.source.sha256, page.number, start, text),
                 source_id=page.source.id, title=page.source.title,
                 url=page.source.url, license=page.source.license,
                 document_sha256=page.source.sha256, page=page.number,

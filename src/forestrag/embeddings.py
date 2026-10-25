@@ -51,7 +51,7 @@ class SemanticEmbedder:
     id = f"{MODEL_NAME}@{MODEL_REVISION}"
 
     def __init__(self, cache_dir: Path = Path("data/models")):
-        from fastembed import TextEmbedding
+        import onnxruntime as ort
         from tokenizers import Tokenizer
         path = cache_dir / ("models--" + MODEL_REPO.replace("/", "--")) / "snapshots" / MODEL_REVISION
         for name, expected in MODEL_FILES.items():
@@ -64,19 +64,34 @@ class SemanticEmbedder:
                 raise ValueError(f"El modelo no supera la verificación de integridad: {name}")
         self.tokenizer = Tokenizer.from_file(str(path / "tokenizer.json"))
         self.tokenizer.no_truncation()
-        self.tokenizer.no_padding()
-        self.model = TextEmbedding(
-            model_name=MODEL_NAME, specific_model_path=str(path),
-            local_files_only=True, threads=2, providers=["CPUExecutionProvider"],
-        )
+        # Sólo este tokenizer/modelo fijado por hash; no autodetección ni código remoto.
+        self.tokenizer.enable_padding(pad_id=self.tokenizer.token_to_id("<pad>"), pad_token="<pad>")
+        options = ort.SessionOptions()
+        options.intra_op_num_threads = 2
+        options.inter_op_num_threads = 2
+        self.model = ort.InferenceSession(str(path / "model_optimized.onnx"),
+                                         sess_options=options, providers=["CPUExecutionProvider"])
 
     def token_count(self, text: str) -> int:
         return len(self.tokenizer.encode(text).ids)
 
     def encode(self, texts: list[str]):
+        if not isinstance(texts, list) or any(not isinstance(text, str) for text in texts):
+            raise ValueError("Se requiere una lista de textos.")
         if any(self.token_count(text) > 128 for text in texts):
             raise ValueError("Texto excede 128 tokens; fragmente el documento o acorte la consulta.")
-        return normalize_vectors(list(self.model.embed(texts, batch_size=32)))
+        pooled = []
+        for start in range(0, len(texts), 32):
+            batch = self.tokenizer.encode_batch(texts[start:start + 32])
+            ids = np.asarray([item.ids for item in batch], dtype=np.int64)
+            mask = np.asarray([item.attention_mask for item in batch], dtype=np.int64)
+            hidden = self.model.run(["last_hidden_state"], {
+                "input_ids": ids, "attention_mask": mask, "token_type_ids": np.zeros_like(ids),
+            })[0]
+            # Media sólo de tokens reales; acumular en float64 conserva el contrato previo.
+            total = np.sum(hidden, axis=1, where=mask[:, :, None].astype(bool), dtype=np.float64)
+            pooled.extend((total / mask.sum(axis=1, keepdims=True)).astype(np.float32))
+        return normalize_vectors(pooled) if pooled else np.empty((0, 384), dtype=np.float32)
 
 
 def make_embedder(backend: str):
