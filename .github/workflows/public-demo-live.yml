@@ -1,0 +1,38 @@
+name: Public demo live checks
+on:
+  push:
+    branches: ["freg-public-arch-001"]
+permissions:
+  contents: read
+jobs:
+  external-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          path: source
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          ref: e0c6717d97470d5b3a0be1b2b251147c15ea1f57
+          path: artifact
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "24.22.1"
+          cache: npm
+          cache-dependency-path: source/public_demo/browser_tests/package-lock.json
+      - name: Install pinned test dependencies without install scripts
+        working-directory: source/public_demo/browser_tests
+        run: npm ci --ignore-scripts
+      - name: Prepare ephemeral Chromium runner
+        working-directory: source/public_demo/browser_tests
+        run: npx --no-install playwright install --with-deps chromium
+      - name: Check external HTTPS, queries, citations and mobile
+        working-directory: source
+        env:
+          NODE_PATH: ${{ github.workspace }}/source/public_demo/browser_tests/node_modules
+          FORESTRAG_EXPECTED_ARTIFACT: ${{ github.workspace }}/artifact
+          FORESTRAG_LIVE_RESULT: ${{ runner.temp }}/forestrag-live.json
+        run: node public_demo/test_live.cjs

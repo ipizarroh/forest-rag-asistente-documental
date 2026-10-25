@@ -1,0 +1,85 @@
+const { chromium } = require("playwright");
+const fs=require("node:fs/promises"),path=require("node:path"),assert=require("node:assert/strict");
+(async()=>{
+const root=path.resolve(__dirname,"..");
+const artifact=path.resolve(process.env.FORESTRAG_EXPECTED_ARTIFACT||"");
+assert.ok(process.env.FORESTRAG_EXPECTED_ARTIFACT,"Set the independently checked artifact directory");
+const browser=await chromium.launch({...(process.env.FORESTRAG_BROWSER_EXECUTABLE?{executablePath:process.env.FORESTRAG_BROWSER_EXECUTABLE}:{}),headless:true});
+const checks=[],errors=[],requests=[];
+const ctx=await browser.newContext({viewport:{width:1440,height:1080}});
+const page=await ctx.newPage();page.on("pageerror",e=>errors.push(e.message));page.on("request",r=>requests.push({method:r.method(),url:r.url()}));
+await page.route("**/*",route=>route.request().url().startsWith("https://ipizarroh.github.io/forest-rag-asistente-documental/")?route.continue():route.abort());
+await page.goto("https://ipizarroh.github.io/forest-rag-asistente-documental/",{waitUntil:"networkidle"});
+await page.getByRole("button",{name:"Buscar evidencia"}).waitFor({state:"visible"});
+await page.waitForFunction(()=>!document.getElementById("submit").disabled);
+checks.push({id:"UI01",scenario:"anonymous desktop opens verified corpus",status:"PASS"});
+await page.getByRole("button",{name:"¿Qué campos registra una observación de terreno?",exact:true}).click();
+await page.locator(".result").first().waitFor();
+assert.match(await page.locator(".result").first().innerText(),/Registro de observaciones/);
+checks.push({id:"UI02",scenario:"suggested query returns real evidence",status:"PASS"});
+await page.locator(".result a").first().click();
+assert.equal(await page.locator("#source-registro-terreno").getAttribute("open"),"");
+checks.push({id:"UI03",scenario:"citation opens matching full source",status:"PASS"});
+const before=requests.length;
+await page.locator("#question").fill("zyxwvut123456789");await page.locator("#submit").click();
+await page.waitForFunction(()=>!document.getElementById("submit").disabled);
+assert.match(await page.locator("#status").innerText(),/No encontré evidencia/);
+assert.equal(await page.locator(".result").count(),0);
+checks.push({id:"UI04",scenario:"unanswerable query abstains",status:"PASS"});
+await page.locator("#question").fill('<img src=x onerror="window.xssExecuted=true">');
+await page.locator("#submit").click();await page.waitForFunction(()=>!document.getElementById("submit").disabled);
+assert.equal(await page.evaluate(()=>window.xssExecuted),undefined);
+assert.equal(requests.length,before);
+checks.push({id:"UI05",scenario:"hostile input executes no code or query requests",status:"PASS"});
+await page.locator("#document").selectOption("monitoreo-forestal");
+await page.locator("#question").fill("cobertura vegetal imágenes");
+await page.locator("#submit").click();await page.waitForFunction(()=>!document.getElementById("submit").disabled);
+assert.match(await page.locator(".result").first().innerText(),/monitoreo forestal/);
+checks.push({id:"UI06",scenario:"document selector constrains evidence",status:"PASS"});
+for(let i=0;i<31;i++){
+ await page.locator("#submit").click();
+ await page.waitForFunction(()=>!document.getElementById("submit").disabled);
+}
+assert.match(await page.locator("#status").innerText(),/máximo 30 consultas/);
+checks.push({id:"UI07",scenario:"per-tab pacing is enforced by UI",status:"PASS"});
+assert.deepEqual(errors,[]);checks.push({id:"UI08",scenario:"no browser page errors",status:"PASS"});
+await ctx.close();
+const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,deviceScaleFactor:1});
+const p=await mobile.newPage();await p.goto("https://ipizarroh.github.io/forest-rag-asistente-documental/",{waitUntil:"networkidle"});
+await p.waitForFunction(()=>!document.getElementById("submit").disabled);
+assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+await p.getByRole("button",{name:"¿Cómo se retira un documento de esta demo?",exact:true}).click();
+await p.locator(".result").first().waitFor();assert.match(await p.locator(".result").first().innerText(),/Control de versiones/);
+checks.push({id:"UI09",scenario:"390px mobile layout and query",status:"PASS"});
+await mobile.close();
+const bad=await browser.newContext();const b=await bad.newPage();
+await b.route("**/corpus.json",route=>route.fulfill({status:200,contentType:"application/json",body:'{"tampered":true}'}));
+await b.goto("https://ipizarroh.github.io/forest-rag-asistente-documental/",{waitUntil:"networkidle"});
+assert.match(await b.locator("#status").innerText(),/No se pudo verificar/);assert.equal(await b.locator("#submit").isDisabled(),true);
+checks.push({id:"UI10",scenario:"altered payload blocks UI before any evidence",status:"PASS"});
+await bad.close();
+const probe=await browser.newContext();const pp=await probe.newPage();
+for(const name of [".env","private.db","README.md","security/history","api/query","src/forestrag/security_lab.py"]){
+ const r=await pp.request.get("https://ipizarroh.github.io/forest-rag-asistente-documental/"+name);assert.equal(r.status(),404);
+}
+assert.ok([403,404,405,501].includes((await pp.request.post("https://ipizarroh.github.io/forest-rag-asistente-documental/corpus.json",{data:"replace"})).status()));
+checks.push({id:"UI11",scenario:"public host exposes no backend or write route",status:"PASS"});
+const crypto=require("node:crypto"),publishedAssets=[];
+for(const name of ["index.html","app.mjs","engine.mjs","style.css","corpus.json","release.json"]){
+ const response=await probe.request.get("https://ipizarroh.github.io/forest-rag-asistente-documental/"+name);
+ assert.equal(response.status(),200);
+ assert.ok(response.url().startsWith("https://ipizarroh.github.io/forest-rag-asistente-documental/"));
+ const body=await response.body(),expected=await fs.readFile(path.join(artifact,name));
+ const hash=bytes=>crypto.createHash("sha256").update(bytes).digest("hex");
+ assert.equal(hash(body),hash(expected),name+" differs from approved artifact");
+ publishedAssets.push({path:name,status:response.status(),sha256:hash(body)});
+}
+const manifest=JSON.parse(await fs.readFile(path.join(artifact,"release.json"),"utf8"));
+assert.equal(manifest.source_commit,"7abc2a7133662ff811bfcdf0c09866cad31cc5ef");
+assert.equal(manifest.source_dirty,false);
+checks.push({id:"UI12",scenario:"six HTTPS assets match the independently pinned artifact",status:"PASS",assets:publishedAssets});
+await probe.close();await browser.close();
+const result={browser:"Playwright Chromium",mode:"external anonymous",timestamp:new Date().toISOString(),url:"https://ipizarroh.github.io/forest-rag-asistente-documental/",source_commit:manifest.source_commit,artifact_commit:"e0c6717d97470d5b3a0be1b2b251147c15ea1f57",viewports:["1440x1080","390x844"],checks,errors,requests};
+if(process.env.FORESTRAG_LIVE_RESULT)await fs.writeFile(process.env.FORESTRAG_LIVE_RESULT,JSON.stringify(result,null,2));
+console.log("FORESTRAG_LIVE_RESULT "+JSON.stringify(result));
+})().catch(e=>{console.error(e);process.exit(1)});
