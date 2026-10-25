@@ -2,13 +2,13 @@
 
 **25-10-2026 / FREG-NEXT-001 / presupuesto permanente $0 CLP y USD 0.**
 
-[Demo pública existente](https://ipizarroh.github.io/forest-rag-asistente-documental/). **demo-0.2.0-rc.1 desplegada** tras CI y Pages PASS. La comprobación HTTPS externa del nuevo corte está pendiente del workflow actualizado; no se cuenta el check del sitio anterior como prueba de este despliegue.
+[Demo pública existente](https://ipizarroh.github.io/forest-rag-asistente-documental/). **demo-0.2.0-rc.1 desplegada** tras CI y Pages PASS. **Comprobación externa nueva PASS: 23 checks**, incluidos catálogo, filtros, móvil y hashes de seis assets HTTPS. [Recibo verificable](reports/next001/publication.json).
 
 | Componente | Estado |
 |---|---|
 | Orientación, catálogo y ámbitos de sugerencias | IMPLEMENTADO y VERIFICADO local: 32 pruebas Node |
 | Ranking BM25, normalización y alias limitados | PARCIAL: regresión 14/14; reservado interno 10/12; no es semántica |
-| Vista móvil y aceptación gráfica nueva | VERIFICADO en CI: escritorio y móvil emulado; pendiente postdespliegue |
+| Vista móvil y aceptación gráfica nueva | VERIFICADO en candidata y HTTPS publicado: 1440×1080 y 390×844 emulado |
 | FREG-SAH-001 | IMPLEMENTADO y VERIFICADO local en rama separada: 22 pruebas; sin integración/publicación |
 | Host y provisión real de la autoridad | NO VERIFICADO; no se modificó Windows |
 | LLM real | PENDIENTE / NO VERIFICADO |
@@ -28,3 +28,5 @@ Base fuente recuperada: 4bd230b434f3c65385f3b5930eae28248ccfcc93. Artefacto ante
 Se conservan A1–A5/B, S0–S4, SAH01–18, A2-03/A3-02 y los incrementos anteriores. No se cierra una etapa sólo por documentación.
 
 Los informes previos reflejan cortes históricos. Cualquier frase antigua «no publicado» o «aprobación pendiente» no sustituye este estado. [Estado anterior conservado](docs/history/PROJECT_STATUS_PRE_NEXT_001.md).
+
+Validación posterior al despliegue: commit de pruebas 77b0a86355589c79f23f6eb0324e3eaa72395ae7; [Tests](https://github.com/ipizarroh/forest-rag-asistente-documental/actions/runs/40209656319), [candidata](https://github.com/ipizarroh/forest-rag-asistente-documental/actions/runs/40209656313) y [HTTPS/UX externo](https://github.com/ipizarroh/forest-rag-asistente-documental/actions/runs/40209656323), todos SUCCESS. La publicación conserva runtime 247bf18 y artefacto 6a317f8; este registro editorial no cambia sus bytes.

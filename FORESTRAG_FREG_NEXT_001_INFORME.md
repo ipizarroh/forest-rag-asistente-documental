@@ -16,7 +16,7 @@ El ranking usa BM25 (k1=1.2, b=.75), un refuerzo de metadatos .25, normalizació
 
 32 pruebas Node locales PASS, cuatro pruebas del control económico PASS y matriz UX-01–10 preparada para navegador de escritorio/móvil. Regresión de 14 consultas: 12/14 antes, 14/14 después. Banco reservado interno posterior, sin reajuste: 10/12; dos falsos negativos. Resultados pequeños, sintéticos y no independientes de una auditoría humana.
 
-La red del entorno bloqueó clone, descarga de dependencias y navegador localhost. Se recuperó código por GitHub y se delegó la ejecución gráfica al workflow autorizado, no a un nuevo servicio. El recibo de CI/despliegue se añade tras observarlo; no se atribuyen pruebas antiguas al commit nuevo.
+La red del entorno bloqueó clone, descarga de dependencias y navegador localhost. Se recuperó código por GitHub y se delegó la ejecución gráfica al workflow autorizado, no a un nuevo servicio. La CI nueva y el despliegue aprobaron; se observaron 23 checks externos contra el artefacto nuevo. Los resultados históricos siguen separados. [Recibo](reports/next001/publication.json).
 
 ## D. Seguridad
 
@@ -36,11 +36,11 @@ No se cambia main ni se fuerza historia. La publicación pública sólo puede av
 
 | Área | Dictamen |
 |---|---|
-| Demo / móvil | GO CON CONDICIONES, condicionado al recibo CI y postdespliegue |
+| Demo / móvil | GO para el corpus sintético y móvil emulado; CI y postdespliegue PASS |
 | Búsqueda | GO CON CONDICIONES: casos obligatorios y limitaciones de paráfrasis explícitas |
 | Seguridad documental | GO CON CONDICIONES, sólo laboratorio local probado |
 | Integridad | GO CON CONDICIONES dentro del adversario limitado al índice |
-| Versionamiento | Trazabilidad por blobs y commits; consultar recibo vigente |
+| Versionamiento | GO: código, artefacto y pruebas trazados en el recibo vigente |
 | Presupuesto | GO para recursos gratuitos delimitados; sin auditoría de facturación de toda la cuenta |
 | IA generativa | NO VERIFICADO; sin inferencia ejecutada |
 | Host Windows | NO VERIFICADO |
@@ -49,3 +49,9 @@ No se cambia main ni se fuerza historia. La publicación pública sólo puede av
 ## H. Siguiente incremento
 
 FREG-NEXT-002: revalidar ONNX local y medir un híbrido contra BM25 en banco nuevo; ampliar pruebas de recuperación segura y revisar provisión de la autoridad. Aceptación: dependencias/licencias/hashes fijados, inferencia real reproducible, métricas publicadas aunque no mejoren, costo cero, ningún cambio a main ni exposición protegida. No sustituir pruebas por respuestas simuladas.
+
+## Cierre observado
+
+Runtime 247bf18ad65457a0707653e22ee59b7dbde9bee4; artefacto Pages 6a317f814b0e68d3c04f47fe6df43616dfa76a9b. CI de verificación 77b0a86355589c79f23f6eb0324e3eaa72395ae7: tres workflows SUCCESS, suite de 110 tests en cada uno de tres entornos Python (cuatro integraciones excluidas), 13 casos de construcción, 32 Node y 22 checks gráficos de candidata. Después: 23 checks externos HTTPS PASS. La observación manual pública también confirmó el catálogo solicitado.
+
+Se conserva el GO CON CONDICIONES de búsqueda y laboratorio. A1–A3/S2 y B/S3 no se cierran; seguridad nueva permanece en ingeniería local c4b5be3b24b2e730cefbb810004b256dcb19291e. Las ACL del host y la inferencia real siguen sin verificar. main permanece intacta. No se generaron PDFs ni ZIP adicionales.

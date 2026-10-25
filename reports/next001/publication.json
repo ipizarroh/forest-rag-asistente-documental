@@ -22,7 +22,18 @@
     "run": 40209330492,
     "status": "success"
   },
-  "postdeploy": "pending",
+  "postdeploy": {
+    "status": "success",
+    "run": 40209656323,
+    "validation_source_sha": "77b0a86355589c79f23f6eb0324e3eaa72395ae7",
+    "https_asset_checks": 6,
+    "external_browser_checks": 23,
+    "viewports": [
+      "1440x1080",
+      "390x844"
+    ],
+    "evidence": "browser-external.json"
+  },
   "local_engineering_sha": "c4b5be3b24b2e730cefbb810004b256dcb19291e",
   "local_engineering_tests": 22,
   "zero_cost": "existing public Pages / standard public Actions; no new paid resources or billing changes",
@@ -30,5 +41,12 @@
     "old_artifact": "e0c6717d97470d5b3a0be1b2b251147c15ea1f57",
     "same_corpus_and_policy": true,
     "scope": "compatibility checked; no live rollback performed"
+  },
+  "main_unchanged_sha": "eee8da5035340abef011357e5f85ad7b2fc34bc3",
+  "verification_ci": {
+    "Tests": 40209656319,
+    "candidate": 40209656313,
+    "live": 40209656323,
+    "all": "success"
   }
 }

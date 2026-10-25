@@ -18,7 +18,7 @@ Corpus: tres documentos ficticios públicos, versión synthetic-2026-10-24-v1. N
 ## Pruebas
 
 - `node --test public_demo/test_engine.mjs public_demo/test_ux.mjs`: 32 pruebas locales PASS, con controles anteriores conservados.
-- `public_demo/test_ux_browser.cjs`: aceptación automatizada en 1440×1080 y 390×844. Ver el gate CI y el recibo vigente; los intentos locales fueron bloqueados por acceso de red y no se cuentan como PASS.
+- `public_demo/test_ux_browser.cjs`: aceptación automatizada en 1440×1080 y 390×844. Candidata: 11 checks nuevos PASS; postdespliegue: los mismos 11 PASS en HTTPS. Se suman 12 comprobaciones externas anteriores repetidas, incluidas igualdad de assets. Los intentos locales fueron bloqueados por red y no se cuentan como PASS.
 - `public_demo/test_browser.cjs`: 11 comprobaciones gráficas anteriores; se vuelven a ejecutar en la candidata.
 - `tests/test_public_demo.py`: 13 casos de construcción/allowlist/integridad, ejecutables en CI.
 - `tests/test_zero_cost.py`: cuatro pruebas locales PASS del control económico.
@@ -32,3 +32,5 @@ Banco adicional `acceptance-reserved.json`, congelado después de implementar ra
 La orientación general muestra el catálogo público y conserva el selector para las siguientes consultas. El aviso explica ese comportamiento. Las sugerencias tienen un documento explícito y notifican el cambio. La consulta manual nunca cambia de filtro silenciosamente.
 
 No es posible determinar con certeza, sólo por falta de coincidencias, si algo no existe o requiere una paráfrasis. El mensaje conserva esa incertidumbre y ofrece revisar fuentes. No hay identidades ni permisos en esta web: todos los bytes descargables son públicos. Un futuro catálogo protegido debe provenir del backend autorizado.
+
+Evidencia: [workflow externo 40209656323](https://github.com/ipizarroh/forest-rag-asistente-documental/actions/runs/40209656323), [JSON de navegador](reports/next001/browser-external.json) y [recibo](reports/next001/publication.json). El protocolo UX-01–10 quedó verificado para el corpus y viewports declarados, sin afirmar comprensión general ni pruebas en un teléfono físico.

@@ -1,3 +1,5 @@
+> Vigente: [PROJECT_STATUS.md](PROJECT_STATUS.md), FREG-NEXT-001. Fuente runtime 247bf18, artefacto 6a317f8, CI de verificación 77b0a86. Este documento conserva las convenciones; las fechas o condiciones antiguas se leen como antecedentes. main no cambia.
+
 # ForestRAG: estrategia de versiones y releases
 
 Fecha: 24-10-2026, America/Santiago. Incremento FREG-PUBLIC-ARCH-001. Proyecto personal independiente; sin información ni infraestructura de ARAUCO. Estados: VERIFICADO (alcance probado), HISTÓRICO, DECLARADO, PROPUESTO, NO VERIFICADO y BLOQUEADO.
