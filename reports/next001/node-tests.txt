@@ -1,0 +1,41 @@
+✔ positive: bundle and useful citation from actual source (5.9276ms)
+✔ Python lexical baseline agrees on terms and vectors (2.371ms)
+✔ filter and unknown document IDs (0.8538ms)
+✔ unanswerable query returns no evidence (0.9728ms)
+✔ empty, oversized, and excessive token input is rejected (0.2981ms)
+✔ private, retired, unknown engine, schema and duplicate identity fail closed (0.9457ms)
+✔ tampered vector norms, dimensions, citations and chunk content rejected (0.6761ms)
+✔ payload is verified against exact trusted manifest digest (18.9899ms)
+✔ mismatched corpus version and incompatible policy fail closed (1.306ms)
+✔ bounded network read and non-OK response (0.6908ms)
+✔ per-tab limiter executes and resets; no server security guarantee (0.2238ms)
+✔ prompt text has no authority or tools (0.845ms)
+✔ deterministic ranking and bounded top-k (1.4257ms)
+{"measurement":"node_local_100_queries_ms","median":0.17660000000000764,"p95":0.29460000000000264,"rss_bytes":72736768}
+✔ measured warm search sample, not a hosted service benchmark (20.2226ms)
+✔ content overlap removes stopword-only and hash-only matches in known examples (1.357ms)
+✔ catalog: ¿Qué puedo encontrar en ForestRAG? (9.2421ms)
+✔ catalog: ¿Qué puedo consultar? (0.7941ms)
+✔ catalog: ¿Qué información tiene ForestRAG? (0.585ms)
+✔ catalog: ¿Qué documentos hay disponibles? (0.478ms)
+✔ catalog: ¿De qué trata esta aplicación? (0.5068ms)
+✔ catalog: ¿Qué información puedo encontrar aquí? (0.3946ms)
+✔ catalog: ¿Qué temas puedo explorar? (0.5461ms)
+✔ catalog: ¿Qué documentos puedo consultar? (0.4173ms)
+✔ UX-03 (1.2899ms)
+✔ UX-04 (1.233ms)
+✔ UX-05 (0.8516ms)
+✔ UX-08 (0.5864ms)
+✔ UX-06: suggestion scope is explicit and bound to available public docs (0.3116ms)
+✔ manual scope stays constrained; expansion offered only on public evidence (0.8794ms)
+✔ UX-07: absent information abstains, with no claim about hidden documents (0.6136ms)
+✔ UX-09: special characters and prompt text cannot expand public scope (1.585ms)
+✔ catalog route obeys bounded inputs and rejects unknown scope (0.9119ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 172.7459

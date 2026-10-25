@@ -1,3 +1,5 @@
+> Estado actual y SHA publicados: [PROJECT_STATUS.md](PROJECT_STATUS.md). FREG-NEXT-001 incorpora catálogo y mejoras léxicas; presupuesto permanente $0. Los informes de incrementos anteriores son históricos.
+
 # ForestRAG
 ### Asistente documental forestal
 

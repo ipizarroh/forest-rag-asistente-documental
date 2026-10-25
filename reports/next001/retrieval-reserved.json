@@ -1,0 +1,128 @@
+{
+  "bank_sha256": "6d3e53dd925ada696da0efacb4f49df29991e1beb9c0634ec2e6d7729fbdc969",
+  "phase": "reserved",
+  "results": [
+    {
+      "id": "R01",
+      "query": "¿Qué información necesita el identificador para relacionar las fotografías?",
+      "document": "registro-terreno",
+      "section": 1,
+      "top": {
+        "document": "registro-terreno",
+        "section": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "R02",
+      "query": "¿Cuándo revisa los registros la persona responsable?",
+      "document": "registro-terreno",
+      "section": 2,
+      "top": {
+        "document": "registro-terreno",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "R03",
+      "query": "¿El cierre registra una acción y una fecha?",
+      "document": "registro-terreno",
+      "section": 2,
+      "top": {
+        "document": "registro-terreno",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "R04",
+      "query": "¿Por qué son pendientes de validación los resultados inciertos?",
+      "document": "monitoreo-forestal",
+      "section": 2,
+      "top": {
+        "document": "monitoreo-forestal",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "R05",
+      "query": "¿De dónde vienen las fuentes de comparación?",
+      "document": "monitoreo-forestal",
+      "section": 2,
+      "top": {
+        "document": "monitoreo-forestal",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "R06",
+      "query": "¿Qué cambia la huella cuando cambian los bytes?",
+      "document": "control-documental",
+      "section": 1,
+      "top": null,
+      "passed": false
+    },
+    {
+      "id": "R07",
+      "query": "¿Qué elimina la siguiente construcción al retirar documentos?",
+      "document": "control-documental",
+      "section": 2,
+      "top": {
+        "document": "control-documental",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "R08",
+      "query": "¿Qué material ilustra trazabilidad documental?",
+      "document": "registro-terreno",
+      "section": 2,
+      "top": {
+        "document": "registro-terreno",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "R09",
+      "query": "¿Qué revela la presencia de nubes sobre la comparación?",
+      "document": "monitoreo-forestal",
+      "section": 2,
+      "top": {
+        "document": "monitoreo-forestal",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "R10",
+      "query": "¿Qué cosas guarda cada observación de terreno?",
+      "document": "registro-terreno",
+      "section": 1,
+      "top": null,
+      "passed": false
+    },
+    {
+      "id": "R11",
+      "query": "¿Dónde están los nombres reales de empleados?",
+      "document": null,
+      "section": null,
+      "top": null,
+      "passed": true
+    },
+    {
+      "id": "R12",
+      "query": "¿Cómo cocino arroz con verduras?",
+      "document": null,
+      "section": null,
+      "top": null,
+      "passed": true
+    }
+  ],
+  "passed": 10,
+  "total": 12
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "candidate_version": "demo-0.1.0-rc.1",
-  "increment": "FREG-PUBLIC-ARCH-001",
+  "candidate_version": "demo-0.2.0-rc.1",
+  "increment": "FREG-NEXT-001",
   "engine": "lexical-sha256-512-v1",
   "policy_version": "public-synthetic-only-v1",
   "database_schema": null,
@@ -17,7 +17,13 @@
     "chunks": 200,
     "payload_bytes": 1000000
   },
-  "threshold": 0.2,
   "top_k": 3,
-  "retrieval_strategy": "cosine-plus-distinct-overlap-v1"
+  "retrieval_strategy": "bm25-metadata-alias-v1",
+  "ranking": {
+    "k1": 1.2,
+    "b": 0.75,
+    "metadata_boost": 0.25,
+    "minimum_distinct_matches": 2,
+    "minimum_coverage": 0.6
+  }
 }

@@ -6,6 +6,7 @@ permissions:
   contents: read
 jobs:
   external-browser:
+    if: github.event.repository.private == false
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -21,8 +22,6 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: "24.22.1"
-          cache: npm
-          cache-dependency-path: source/public_demo/browser_tests/package-lock.json
       - name: Install pinned test dependencies without install scripts
         working-directory: source/public_demo/browser_tests
         run: npm ci --ignore-scripts

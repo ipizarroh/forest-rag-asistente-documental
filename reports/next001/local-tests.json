@@ -1,0 +1,12 @@
+{
+  "date_local": "2026-10-25",
+  "baseline_remote_sha": "4bd230b434f3c65385f3b5930eae28248ccfcc93",
+  "recovery_blobs_verified": 147,
+  "node_baseline_passed": 15,
+  "node_candidate_passed": 32,
+  "zero_cost_guard_tests_passed": 4,
+  "sah_local_unittest_passed": 18,
+  "local_graphical_checks": "BLOCKED: network access denied, not counted as PASS",
+  "semantic_llm": "NOT_EXECUTED",
+  "host_acl": "NOT_VERIFIED"
+}

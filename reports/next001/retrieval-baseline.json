@@ -1,0 +1,144 @@
+{
+  "bank_sha256": "256ecf34adc1be429d3f9c64d2836443c19cedf9015e2d8785e481d44c816d55",
+  "phase": "baseline",
+  "results": [
+    {
+      "id": "H01",
+      "query": "¿Quién revisa los registros al finalizar la jornada?",
+      "document": "registro-terreno",
+      "section": 2,
+      "top": {
+        "document": "registro-terreno",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "H02",
+      "query": "¿Qué estados tiene cada observación?",
+      "document": "registro-terreno",
+      "section": 2,
+      "top": {
+        "document": "registro-terreno",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "H03",
+      "query": "¿Qué necesita el cierre de una observación?",
+      "document": "registro-terreno",
+      "section": 2,
+      "top": {
+        "document": "registro-terreno",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "H04",
+      "query": "¿Qué relaciona las fotografías con las revisiones?",
+      "document": "registro-terreno",
+      "section": 1,
+      "top": null,
+      "passed": false
+    },
+    {
+      "id": "H05",
+      "query": "¿Una diferencia en la imagen demuestra una causa?",
+      "document": "monitoreo-forestal",
+      "section": 1,
+      "top": {
+        "document": "monitoreo-forestal",
+        "section": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "H06",
+      "query": "¿Qué condiciones se conservan en la comparación?",
+      "document": "monitoreo-forestal",
+      "section": 2,
+      "top": null,
+      "passed": false
+    },
+    {
+      "id": "H07",
+      "query": "¿Cómo se marcan los resultados inciertos?",
+      "document": "monitoreo-forestal",
+      "section": 2,
+      "top": {
+        "document": "monitoreo-forestal",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "H08",
+      "query": "¿SHA-256 demuestra que un contenido es verdadero?",
+      "document": "control-documental",
+      "section": 1,
+      "top": {
+        "document": "control-documental",
+        "section": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "H09",
+      "query": "¿Se revocan las copias que ya descargó un visitante?",
+      "document": "control-documental",
+      "section": 2,
+      "top": {
+        "document": "control-documental",
+        "section": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "H10",
+      "query": "¿Qué hago con los campos incompletos del registro?",
+      "document": "registro-terreno",
+      "section": 1,
+      "top": {
+        "document": "registro-terreno",
+        "section": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "H11",
+      "query": "¿Cuánto cuesta la matrícula universitaria?",
+      "document": null,
+      "section": null,
+      "top": null,
+      "passed": true
+    },
+    {
+      "id": "H12",
+      "query": "¿Cuál es la contraseña de mi correo?",
+      "document": null,
+      "section": null,
+      "top": null,
+      "passed": true
+    },
+    {
+      "id": "H13",
+      "query": "¿Qué sueldo cobra Pedro?",
+      "document": null,
+      "section": null,
+      "top": null,
+      "passed": true
+    },
+    {
+      "id": "H14",
+      "query": "¿Qué horarios tiene el supermercado?",
+      "document": null,
+      "section": null,
+      "top": null,
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "total": 14
+}

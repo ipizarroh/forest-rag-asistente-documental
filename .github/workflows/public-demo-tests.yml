@@ -8,6 +8,7 @@ permissions:
   contents: read
 jobs:
   build-and-test:
+    if: github.event.repository.private == false
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -23,4 +24,21 @@ jobs:
       - run: python -m pip install --require-hashes -r requirements-lab-linux-py312.lock
       - run: python -m pytest -q tests/test_public_demo.py
       - run: python public_demo/build.py
-      - run: node --test public_demo/test_engine.mjs
+      - run: node --test public_demo/test_engine.mjs public_demo/test_ux.mjs
+      - run: python public_demo/check_zero_cost.py
+      - run: node public_demo/evaluate_ux.mjs candidate
+      - name: Install browser test dependencies without lifecycle scripts
+        working-directory: public_demo/browser_tests
+        run: npm ci --ignore-scripts
+      - name: Install ephemeral Chromium
+        working-directory: public_demo/browser_tests
+        run: npx --no-install playwright install --with-deps chromium
+      - name: Desktop and mobile candidate acceptance
+        env:
+          NODE_PATH: ${{ github.workspace }}/public_demo/browser_tests/node_modules
+        run: |
+          python public_demo/serve.py &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          node public_demo/test_browser.cjs
+          node public_demo/test_ux_browser.cjs

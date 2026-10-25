@@ -1,0 +1,77 @@
+{
+  "purpose": "Internally authored reserved bank; frozen after ranking implementation, before first run. No rule changes permitted from this result.",
+  "cases": [
+    {
+      "id": "R01",
+      "query": "¿Qué información necesita el identificador para relacionar las fotografías?",
+      "document": "registro-terreno",
+      "section": 1
+    },
+    {
+      "id": "R02",
+      "query": "¿Cuándo revisa los registros la persona responsable?",
+      "document": "registro-terreno",
+      "section": 2
+    },
+    {
+      "id": "R03",
+      "query": "¿El cierre registra una acción y una fecha?",
+      "document": "registro-terreno",
+      "section": 2
+    },
+    {
+      "id": "R04",
+      "query": "¿Por qué son pendientes de validación los resultados inciertos?",
+      "document": "monitoreo-forestal",
+      "section": 2
+    },
+    {
+      "id": "R05",
+      "query": "¿De dónde vienen las fuentes de comparación?",
+      "document": "monitoreo-forestal",
+      "section": 2
+    },
+    {
+      "id": "R06",
+      "query": "¿Qué cambia la huella cuando cambian los bytes?",
+      "document": "control-documental",
+      "section": 1
+    },
+    {
+      "id": "R07",
+      "query": "¿Qué elimina la siguiente construcción al retirar documentos?",
+      "document": "control-documental",
+      "section": 2
+    },
+    {
+      "id": "R08",
+      "query": "¿Qué material ilustra trazabilidad documental?",
+      "document": "registro-terreno",
+      "section": 2
+    },
+    {
+      "id": "R09",
+      "query": "¿Qué revela la presencia de nubes sobre la comparación?",
+      "document": "monitoreo-forestal",
+      "section": 2
+    },
+    {
+      "id": "R10",
+      "query": "¿Qué cosas guarda cada observación de terreno?",
+      "document": "registro-terreno",
+      "section": 1
+    },
+    {
+      "id": "R11",
+      "query": "¿Dónde están los nombres reales de empleados?",
+      "document": null,
+      "section": null
+    },
+    {
+      "id": "R12",
+      "query": "¿Cómo cocino arroz con verduras?",
+      "document": null,
+      "section": null
+    }
+  ]
+}

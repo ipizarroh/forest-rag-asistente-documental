@@ -53,15 +53,78 @@ export async function encodeQuery(question) {
   const norm = Math.sqrt(vector.reduce((s,v)=>s+v*v,0));
   return vector.map(v=>v/norm);
 }
+
+// Limited corpus vocabulary, not semantic inference or a general Spanish stemmer.
+const GROUPS = [
+  ["registro","registra","registran","registrar","registros","anota","anotar"],
+  ["observacion","observaciones"],["campo","campos","datos"],
+  ["imagen","imagenes"],["fotografia","fotografias","fotos"],
+  ["retira","retirar","retirado","retirada","retiro","quitar"],
+  ["version","versiones"],["revisa","revisan","revisar","revision","revisiones"],
+  ["compara","comparar","comparacion","comparaciones"],["documento","documentos"],
+  ["fecha","fechas"]
+];
+const ALIASES = new Map(GROUPS.flatMap(group=>group.map(t=>[t,group[0]])));
+const SEARCH_STOP = new Set([...STOP,...terms("quien tiene tienen puedo podemos hay aqui este esta aplicacion demo del los las una que para porque informacion favor quiero necesito saber encontrar hace hacer hago encuentra")]);
+SEARCH_STOP.delete("antes"); // Preserve temporal conditions that distinguish preparation from comparison.
+export function searchTerms(text) {
+  return terms(text).filter(t=>!SEARCH_STOP.has(t)).map(t=>(ALIASES.get(t)??t).replace(/ciones$/,'cion').replace(/(?<=.{4})s$/,''));
+}
+export function isCatalogQuery(question) {
+  const t=terms(question).join(" ");
+  const target=/\b(forestrag|aplicacion|sistema)\b/.test(t);
+  const catalog=/\b(catalogo|temas|documentos|informacion|consultar|consulta|contiene|capacidades)\b/.test(t);
+  const navigation=/\b(que|cuales|puedo|hay|disponibles|encontrar|explorar|trata|funciona|hacer|sirve)\b/.test(t);
+  // Restrict orientation to general navigation; factual questions still retrieve evidence.
+  const factual=/\b(campos|registra|observacion|imagenes|retira|version|fecha|revision|sha|comparar|documento)\b/.test(t);
+  return navigation && !factual && (catalog || target);
+}
+export const suggestions = [
+  {question:"¿Qué puedo encontrar en ForestRAG?",documentId:""},
+  {question:"¿Qué campos registra una observación de terreno?",documentId:"registro-terreno"},
+  {question:"¿Qué se revisa antes de comparar imágenes?",documentId:"monitoreo-forestal"},
+  {question:"¿Cómo se retira un documento de esta demo?",documentId:"control-documental"}
+];
+export function suggestionScope(suggestion, data) {
+  if (!suggestions.includes(suggestion) ||
+      (suggestion.documentId && !data.documents.some(d=>d.id===suggestion.documentId)))
+    throw new Error("Sugerencia no disponible.");
+  return suggestion.documentId;
+}
 export async function search(question, data, documentId="") {
   if (documentId && !data.documents.some(d=>d.id===documentId)) throw new Error("Documento no disponible.");
-  const query = await encodeQuery(question);
-  const contentTerms=[...new Set(terms(question).filter(t=>!STOP.has(t)))];
-  if (!contentTerms.length) throw new Error("Agrega una palabra específica del tema que buscas.");
-  // shortcut: hashing can collide and lexical matches miss paraphrases; use semantic retrieval after its own gate.
-  return data.chunks.filter(c=>(!documentId || c.document_id===documentId) && contentTerms.filter(t=>terms(c.text).includes(t)).length >= Math.min(2,contentTerms.length))
-    .map(c=>({chunk:c,score:c.vector.reduce((sum,[i,v])=>sum+query[i]*v,0)}))
-    .filter(h=>h.score>=0.20).sort((a,b)=>b.score-a.score || a.chunk.id.localeCompare(b.chunk.id)).slice(0,3);
+  await encodeQuery(question); // Preserve the bounded input contract.
+  const query=[...new Set(searchTerms(question))];
+  if (!query.length) throw new Error("Agrega una palabra específica del tema que buscas.");
+  const rows=data.chunks.map(chunk=>{
+    const doc=data.documents.find(d=>d.id===chunk.document_id);
+    return {chunk,body:searchTerms(chunk.text),meta:searchTerms(doc.title+" "+chunk.section_title)};
+  });
+  const average=rows.reduce((n,r)=>n+r.body.length,0)/rows.length;
+  // BM25 with k1=1.2, b=.75; metadata contributes a small, explicit boost.
+  return rows.filter(r=>!documentId||r.chunk.document_id===documentId).map(r=>{
+    let matched=0,score=0;
+    for(const term of query) {
+      const tf=r.body.filter(t=>t===term).length, metadata=r.meta.includes(term);
+      if (!tf&&!metadata) continue;
+      matched++;
+      const df=rows.filter(x=>x.body.includes(term)||x.meta.includes(term)).length;
+      const idf=Math.log(1+(rows.length-df+.5)/(df+.5));
+      if(tf) score+=idf*(tf*2.2)/(tf+1.2*(.25+.75*r.body.length/average));
+      if(metadata) score+=.25*idf;
+    }
+    return {chunk:r.chunk,score,matched};
+  }).filter(r=>r.matched>=Math.min(query.length,Math.max(2,Math.ceil(query.length*.6)))&&r.score>0)
+    .sort((a,b)=>b.score-a.score||a.chunk.id.localeCompare(b.chunk.id)).slice(0,3)
+    .map(({chunk,score})=>({chunk,score}));
+}
+export async function resolveQuery(question,data,documentId="") {
+  await encodeQuery(question);
+  if (documentId&&!data.documents.some(d=>d.id===documentId)) throw new Error("Documento no disponible.");
+  if(isCatalogQuery(question)) return {kind:"catalog",documents:data.documents};
+  const hits=await search(question,data,documentId);
+  if(hits.length) return {kind:"evidence",hits};
+  return {kind:"no_match",hits:[],otherScopeAvailable:!!documentId&&(await search(question,data)).length>0};
 }
 export function createLimiter(now=()=>Date.now()) {
   let start=now(), used=0;
@@ -89,7 +152,7 @@ export async function readBounded(response, maxBytes) {
 export async function loadBundle(fetcher=fetch) {
   const manifestBytes=await readBounded(await fetcher("./release.json",{cache:"no-store"}),16384);
   const manifest=JSON.parse(new TextDecoder().decode(manifestBytes));
-  if (manifest.schema_version!==1 || manifest.engine!==ENGINE || manifest.retrieval_strategy!=="cosine-plus-distinct-overlap-v1" || manifest.policy_version!=="public-synthetic-only-v1" ||
+  if (manifest.schema_version!==1 || manifest.engine!==ENGINE || manifest.retrieval_strategy!=="bm25-metadata-alias-v1" || manifest.policy_version!=="public-synthetic-only-v1" ||
       !/^[a-f0-9]{40}$/.test(manifest.source_commit) || typeof manifest.candidate_version!=="string" ||
       manifest.candidate_version.length>64 || !manifest.files?.["corpus.json"] ||
       !/^[a-f0-9]{64}$/.test(manifest.files["corpus.json"].sha256)) invalid();
