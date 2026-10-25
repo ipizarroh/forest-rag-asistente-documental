@@ -1,12 +1,17 @@
-# FREG-PUBLIC-ARCH-001-GO - alcance público
-
+# Publicación de ForestRAG - FREG-PUBLIC-ARCH-001-GO
 Fecha:24-10-2026, America/Santiago.
-El propietario autorizó publicar la candidata local ca423062f8e9b83f12365a42248c7e65d6107f45, condicionada a CI y controles previos, sin modificar main.
 
-La revisión automática rechazó el snapshot completo por incluir documentación de fuentes privadas. Este paquete reduce materialmente la publicación a demo, fuentes compartidas mínimas, pruebas, dependencias y licencia. No contiene esa documentación ni enlaces privados. La continuidad completa y su copiaGit original permanecen fuera de esta rama pública.
+El propietario autorizó publicar la candidata ca423062f8e9b83f12365a42248c7e65d6107f45 y después pidió publicar todos los archivos del proyecto necesarios para que cualquier persona pueda probarla.
 
-Los archivos de ejecución de public_demo y los cuatro módulos compartidos se copiaron byte a byte de la candidata aprobada. Sólo README, este documento y reglas de empaquetado son nuevos. No se altera el comportamiento de búsqueda aprobado. El transporte API produce otro commit; se comprobará el árbol y se registrará su SHA remoto.
+Se publica el código completo del proyecto, configuraciones, dependencias, pruebas, documentación técnica propia e informes revisados. Se excluye el documento histórico recuperado de una fuente privada y se retiran enlaces o identificadores privados. No se publican el archivo histórico de auditoría, secretos, bases locales, modelos descargados ni documentos empresariales reales.
 
-La CI de esta rama valida el subconjunto público:13 casos Python y15 casos Node; no sustituye las104 pruebas locales históricas, las11 comprobaciones de navegador ni la suite completa del prototipo. La versión sigue siendo demo-0.1.0-rc.1, no una release empresarial estable.
+La primera revisión automática rechazó un snapshot completo por documentación de origen privado. Se creó primero una fuente mínima revisada en809ab95d9429001b61886f4fdaddfa1589218de1. Tras la instrucción explícita adicional del propietario, este snapshot incorpora el código completo revisado y mantiene las exclusiones privadas. No se ha eludido el rechazo publicando el documento excluido por partes.
 
-Para revertir, deshabilitar temporalmente Pages si existe exposición indebida, identificar el SHA desplegado y reconstruir código revisado con corpus vigente. No borrar historial ni republicar paquetes viejos con fuentes retiradas. Conservar registros de la incidencia y repetir CI/verificación externa antes de promover.
+Los archivos de ejecución de la demo y sus módulos compartidos conservan los bytes aprobados. El transporte API genera un SHA distinto al commit local; se verificará el árbol, CI y el manifiesto. main no se modifica.
+
+La demo online sólo incluirá los siete archivos de dist/public-demo. Los componentes de CLI, SQLite, semántica local y laboratorio de autorización permanecen fuera de ese directorio y no se exponen como servicios. Subir su código no habilita esos servicios en GitHub Pages.
+
+No hay una URL pública verificada mientras no se habilite Pages y se complete la visita externa. Los resultados reales de CI, despliegue y reversión se registrarán en el recibo de esta publicación.
+
+## Reversión preparada
+Identificar el SHA desplegado y conservar el recibo. Si hay exposición indebida, deshabilitar Pages; corregir en una nueva revisión sin borrar historia. Para volver a código anterior, reconstruir con corpus/políticas vigentes, repetir CI y comprobar externamente consultas/citas antes de promover. No restaurar documentos retirados mediante un paquete antiguo.

@@ -1,0 +1,127 @@
+[
+  {
+    "id": "P01",
+    "question": "¿Cómo ayuda la inteligencia artificial al análisis de datos obtenidos por teledetección?",
+    "reference_answer": "La publicación vincula la IA con una mayor capacidad de analizar grandes volúmenes de datos de teledetección.",
+    "expected_pages": [
+      {
+        "source_id": "fao-sofo2024-es",
+        "page": 43
+      }
+    ],
+    "reference_terms": [
+      "inteligencia artificial",
+      "teledetección"
+    ]
+  },
+  {
+    "id": "P02",
+    "question": "¿Qué información ofrece la base de datos TreeGOER sobre las especies de árboles?",
+    "reference_answer": "Áreas de distribución ambiental y variables bioclimáticas, edáficas y topográficas.",
+    "expected_pages": [
+      {
+        "source_id": "fao-sofo2024-es",
+        "page": 43
+      }
+    ],
+    "reference_terms": [
+      "TreeGOER",
+      "distribución ambiental",
+      "bioclimáticas",
+      "edáficas",
+      "topográficas"
+    ]
+  },
+  {
+    "id": "P03",
+    "question": "¿Qué problemas de privacidad y seguridad aparecen al compartir datos forestales?",
+    "reference_answer": "Determinar la propiedad y control de los datos y equilibrar transparencia con protección de información sensible.",
+    "expected_pages": [
+      {
+        "source_id": "fao-sofo2024-es",
+        "page": 43
+      }
+    ],
+    "reference_terms": [
+      "privacidad",
+      "seguridad",
+      "datos sensibles"
+    ]
+  },
+  {
+    "id": "P04",
+    "question": "¿Cómo ayuda la visión artificial a detectar defectos en la madera aserrada?",
+    "reference_answer": "Detecta defectos superficiales como nudos y grietas y facilita la clasificación automatizada.",
+    "expected_pages": [
+      {
+        "source_id": "fao-sofo2024-es",
+        "page": 47
+      }
+    ],
+    "reference_terms": [
+      "defectos",
+      "nudos",
+      "grietas"
+    ]
+  },
+  {
+    "id": "P05",
+    "question": "¿Qué papel tienen los sensores y la IA en la recolección automatizada de madera?",
+    "reference_answer": "La publicación describe identificación de árboles y automatización de operaciones de recolección. Se consulta como antecedente, no como instrucción.",
+    "expected_pages": [
+      {
+        "source_id": "fao-sofo2024-es",
+        "page": 47
+      }
+    ],
+    "reference_terms": [
+      "sensores",
+      "árboles"
+    ]
+  },
+  {
+    "id": "P06",
+    "question": "¿Está muy extendida la Industria 4.0 en la transformación primaria de madera en Estados Unidos?",
+    "reference_answer": "El documento señala una adopción limitada; la afirmación corresponde al informe 2024 y no prueba la situación actual.",
+    "expected_pages": [
+      {
+        "source_id": "fao-sofo2024-es",
+        "page": 47
+      }
+    ],
+    "reference_terms": [
+      "Estados Unidos",
+      "no está muy extendida"
+    ]
+  },
+  {
+    "id": "N01",
+    "question": "¿Cuál es la capital de Japón?",
+    "reference_answer": "El corpus no contiene esta información.",
+    "expected_pages": []
+  },
+  {
+    "id": "N02",
+    "question": "¿Cuál es el precio de las acciones de ARAUCO hoy?",
+    "reference_answer": "El corpus no contiene precios bursátiles actuales.",
+    "expected_pages": []
+  },
+  {
+    "id": "N03",
+    "question": "¿Qué intervalo de lubricación tiene el motor de la máquina modelo X999?",
+    "reference_answer": "El corpus no incluye manuales de ese fabricante ni ese equipo.",
+    "expected_pages": []
+  },
+  {
+    "id": "N04",
+    "question": "¿Qué sistema SAP utiliza internamente ARAUCO y cuántos usuarios tiene?",
+    "reference_answer": "No hay documentación interna de la empresa en el corpus.",
+    "expected_pages": []
+  },
+  {
+    "id": "N05",
+    "question": "¿Qué porcentaje exacto de productividad ganó ARAUCO al instalar visión artificial en 2026?",
+    "reference_answer": "La fuente no informa resultados específicos de ARAUCO en 2026.",
+    "expected_pages": []
+  }
+]

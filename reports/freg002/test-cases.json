@@ -1,0 +1,1147 @@
+[
+  {
+    "id": "F002-001",
+    "requirement": "REGRESSION",
+    "scenario": "test_query_ui_uses_real_local_index",
+    "expected": [
+      "not app.exception",
+      "not app.exception",
+      "any(('No es una respuesta generada' in str(x.value) for x in app.markdown))",
+      "len(app.expander) >= 1"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_app.py::test_query_ui_uses_real_local_index; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-002",
+    "requirement": "REGRESSION",
+    "scenario": "test_missing_index_is_explained",
+    "expected": [
+      "not app.exception and len(app.warning) == 1"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_app.py::test_missing_index_is_explained; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-003",
+    "requirement": "REGRESSION",
+    "scenario": "test_f02_tampered_index_fails_closed[payload]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f02_tampered_index_fails_closed[payload]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-004",
+    "requirement": "REGRESSION",
+    "scenario": "test_f02_tampered_index_fails_closed[swap]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f02_tampered_index_fails_closed[swap]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-005",
+    "requirement": "REGRESSION",
+    "scenario": "test_f02_tampered_index_fails_closed[scale]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f02_tampered_index_fails_closed[scale]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-006",
+    "requirement": "REGRESSION",
+    "scenario": "test_f02_tampered_index_fails_closed[delete]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f02_tampered_index_fails_closed[delete]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-007",
+    "requirement": "REGRESSION",
+    "scenario": "test_f06_missing_metadata_is_domain_error",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f06_missing_metadata_is_domain_error; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-008",
+    "requirement": "REGRESSION",
+    "scenario": "test_old_schema_requires_explicit_rebuild",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_old_schema_requires_explicit_rebuild; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-009",
+    "requirement": "REGRESSION",
+    "scenario": "test_f04_empty_page_selection_is_not_whole_document",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f04_empty_page_selection_is_not_whole_document; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-010",
+    "requirement": "REGRESSION",
+    "scenario": "test_f06_malformed_pdf_translated",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f06_malformed_pdf_translated; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-011",
+    "requirement": "REGRESSION",
+    "scenario": "test_f07_newline_does_not_bypass_conservative_filter",
+    "expected": [
+      "risky_request('desactivar\\nprotecciones de seguridad')"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f07_newline_does_not_bypass_conservative_filter; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-012",
+    "requirement": "REGRESSION",
+    "scenario": "test_f09_cloud_tag_rejected_without_connection",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f09_cloud_tag_rejected_without_connection; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-013",
+    "requirement": "REGRESSION",
+    "scenario": "test_f06_ollama_envelope_array_is_controlled_error",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_audit_regressions.py::test_f06_ollama_envelope_array_is_controlled_error; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-014",
+    "requirement": "REGRESSION",
+    "scenario": "test_abstention_without_evidence_never_calls_llm",
+    "expected": [
+      "extractive_answer([])['message'] == NO_EVIDENCE",
+      "ollama_answer('datos', [])['abstained']"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_abstention_without_evidence_never_calls_llm; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-015",
+    "requirement": "REGRESSION",
+    "scenario": "test_untrusted_context_separated",
+    "expected": [
+      "len(messages) == 2 and messages[0]['role'] == 'system'",
+      "sample[0].text not in messages[0]['content']",
+      "json.loads(messages[1]['content'])['untrusted_document_context'][0]['id'] == sample[0].id"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_untrusted_context_separated; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-016",
+    "requirement": "REGRESSION",
+    "scenario": "test_invalid_citations_fail_closed[payload0]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_invalid_citations_fail_closed[payload0]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-017",
+    "requirement": "REGRESSION",
+    "scenario": "test_invalid_citations_fail_closed[payload1]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_invalid_citations_fail_closed[payload1]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-018",
+    "requirement": "REGRESSION",
+    "scenario": "test_invalid_citations_fail_closed[payload2]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_invalid_citations_fail_closed[payload2]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-019",
+    "requirement": "REGRESSION",
+    "scenario": "test_invalid_citations_fail_closed[payload3]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_invalid_citations_fail_closed[payload3]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-020",
+    "requirement": "REGRESSION",
+    "scenario": "test_invalid_citations_fail_closed[payload4]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_invalid_citations_fail_closed[payload4]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-021",
+    "requirement": "REGRESSION",
+    "scenario": "test_ollama_contract_with_simulated_transport",
+    "expected": [
+      "result['claims'] == [claim]",
+      "not result['abstained']",
+      "request.full_url == 'http://127.0.0.1:11434/api/chat'",
+      "body['stream'] is False and 'tools' not in body"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_ollama_contract_with_simulated_transport; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-022",
+    "requirement": "REGRESSION",
+    "scenario": "test_risky_operations_redirected[C\\xf3mo desactivar las protecciones de seguridad]",
+    "expected": [
+      "risky_request(question)"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_risky_operations_redirected[C\\xf3mo desactivar las protecciones de seguridad]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-023",
+    "requirement": "REGRESSION",
+    "scenario": "test_risky_operations_redirected[Instrucciones paso a paso para operar una motosierra]",
+    "expected": [
+      "risky_request(question)"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_risky_operations_redirected[Instrucciones paso a paso para operar una motosierra]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-024",
+    "requirement": "REGRESSION",
+    "scenario": "test_evaluation_metrics_use_expected_pages",
+    "expected": [
+      "report['case_count'] == 2 and report['hit_at_k'] == 1",
+      "report['unanswerable_abstention_rate'] == 1",
+      "report['cases'][0]['elapsed_ms'] >= 0"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_generation_evaluation.py::test_evaluation_metrics_use_expected_pages; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-025",
+    "requirement": "TRUST",
+    "scenario": "test_missing_anchor_denies_before_sqlite",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_index_trust.py::test_missing_anchor_denies_before_sqlite; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-026",
+    "requirement": "TRUST",
+    "scenario": "test_modified_bytes_denied_before_sqlite",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_index_trust.py::test_modified_bytes_denied_before_sqlite; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-027",
+    "requirement": "TRUST",
+    "scenario": "test_replaced_index_and_coedited_sidecar_cannot_change_trust",
+    "expected": [
+      "old_sha != new_sha",
+      "index_metadata(path, trusted_sha256=new_sha)['count'] == '1'"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_index_trust.py::test_replaced_index_and_coedited_sidecar_cannot_change_trust; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-028",
+    "requirement": "TRUST",
+    "scenario": "test_verified_snapshot_survives_path_swap_without_using_new_bytes",
+    "expected": [
+      "hits and 'mantenimiento' in hits[0].chunk.text",
+      "'SUSTITUIDO' not in hits[0].chunk.text"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_index_trust.py::test_verified_snapshot_survives_path_swap_without_using_new_bytes; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-029",
+    "requirement": "TRUST",
+    "scenario": "test_authorized_new_version_rejects_rollback_and_retirement",
+    "expected": [
+      "'NUEVO-INDICE' in retrieve('inventario', path, embedder, threshold=0.1)[0].chunk.text"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_index_trust.py::test_authorized_new_version_rejects_rollback_and_retirement; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-030",
+    "requirement": "TRUST",
+    "scenario": "test_trusted_but_invalid_sqlite_is_controlled",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_index_trust.py::test_trusted_but_invalid_sqlite_is_controlled; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-031",
+    "requirement": "REGRESSION",
+    "scenario": "test_registered_text_and_hash",
+    "expected": [
+      "pages[0].text == 'Documentación forestal española.'",
+      "pages[0].source.sha256 == source.sha256"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_registered_text_and_hash; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-032",
+    "requirement": "REGRESSION",
+    "scenario": "test_manifest_rejects_unapproved_source[changes0]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_unapproved_source[changes0]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-033",
+    "requirement": "REGRESSION",
+    "scenario": "test_manifest_rejects_unapproved_source[changes1]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_unapproved_source[changes1]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-034",
+    "requirement": "REGRESSION",
+    "scenario": "test_manifest_rejects_unapproved_source[changes2]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_unapproved_source[changes2]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-035",
+    "requirement": "REGRESSION",
+    "scenario": "test_manifest_rejects_unapproved_source[changes3]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_unapproved_source[changes3]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-036",
+    "requirement": "REGRESSION",
+    "scenario": "test_manifest_rejects_unapproved_source[changes4]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_unapproved_source[changes4]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-037",
+    "requirement": "REGRESSION",
+    "scenario": "test_manifest_rejects_duplicate_sources",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_manifest_rejects_duplicate_sources; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-038",
+    "requirement": "REGRESSION",
+    "scenario": "test_directory_escape_blocked",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_directory_escape_blocked; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-039",
+    "requirement": "REGRESSION",
+    "scenario": "test_file_limits_and_signature",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_file_limits_and_signature; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-040",
+    "requirement": "REGRESSION",
+    "scenario": "test_scanned_empty_pdf_fails_explicitly",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_scanned_empty_pdf_fails_explicitly; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-041",
+    "requirement": "REGRESSION",
+    "scenario": "test_real_pdf_extraction_preserves_page",
+    "expected": [
+      "len(pages) == 1 and pages[0].number == 2",
+      "'Inventario' in pages[0].text"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_real_pdf_extraction_preserves_page; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-042",
+    "requirement": "REGRESSION",
+    "scenario": "test_no_unapproved_direct_ingestion",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_ingestion.py::test_no_unapproved_direct_ingestion; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-043",
+    "requirement": "REGRESSION",
+    "scenario": "test_normalization",
+    "expected": [
+      "normalize('conser-\\nvación \\n  forestal\\x00') == 'conservación forestal'"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_normalization; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-044",
+    "requirement": "REGRESSION",
+    "scenario": "test_chunks_stay_on_page_and_stable",
+    "expected": [
+      "{c.page for c in chunks} == {1, 2}",
+      "len({c.id for c in chunks}) == len(chunks)",
+      "chunks == chunk_pages(pages, max_words=8, overlap=2)",
+      "chunks[0].id != chunk_pages([replace(pages[0], source=replace(source, sha256='1' * 64))], 8, 2)[0].id"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_chunks_stay_on_page_and_stable; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-045",
+    "requirement": "REGRESSION",
+    "scenario": "test_token_budget_and_coverage",
+    "expected": [
+      "all((len(c.text.split()) <= 7 for c in chunks))",
+      "set(' '.join((c.text for c in chunks)).split()) == set(text.split())"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_token_budget_and_coverage; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-046",
+    "requirement": "REGRESSION",
+    "scenario": "test_invalid_chunk_parameters[0-0]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_invalid_chunk_parameters[0-0]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-047",
+    "requirement": "REGRESSION",
+    "scenario": "test_invalid_chunk_parameters[4-4]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_invalid_chunk_parameters[4-4]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-048",
+    "requirement": "REGRESSION",
+    "scenario": "test_invalid_chunk_parameters[4--1]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_invalid_chunk_parameters[4--1]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-049",
+    "requirement": "REGRESSION",
+    "scenario": "test_retrieval_roundtrip_and_page",
+    "expected": [
+      "hits[0].chunk.page == 1",
+      "hits[0].chunk.document_sha256 == '0' * 64",
+      "index_metadata(path)['embedder'] == embedder.id",
+      "not retrieve('astronomía galaxia júpiter', path, embedder, threshold=0.8)",
+      "not retrieve('mantenimiento', path, embedder, source_id='otra-fuente')"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_retrieval_roundtrip_and_page; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-050",
+    "requirement": "REGRESSION",
+    "scenario": "test_embedding_mismatch_and_dimensions",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_embedding_mismatch_and_dimensions; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-051",
+    "requirement": "REGRESSION",
+    "scenario": "test_atomic_index_preserved_on_invalid_write",
+    "expected": [
+      "path.read_bytes() == before"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_atomic_index_preserved_on_invalid_write; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-052",
+    "requirement": "REGRESSION",
+    "scenario": "test_bad_queries[]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_bad_queries[]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-053",
+    "requirement": "REGRESSION",
+    "scenario": "test_bad_queries[   ]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_bad_queries[   ]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-054",
+    "requirement": "REGRESSION",
+    "scenario": "test_bad_queries[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_bad_queries[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-055",
+    "requirement": "REGRESSION",
+    "scenario": "test_bad_queries[None]",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_bad_queries[None]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-056",
+    "requirement": "REGRESSION",
+    "scenario": "test_retrieval_limits",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_pipeline.py::test_retrieval_limits; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-057",
+    "requirement": "SECURITY",
+    "scenario": "test_ac01_ac02_same_question_useful_different_permissions",
+    "expected": [
+      "docs(ops) == {'public', 'ops', 'injection'}",
+      "docs(hr) == {'public', 'hr'}",
+      "'PINO-101' in json.dumps(ops)",
+      "'NOMINA-FICTICIA-740' in json.dumps(hr)",
+      "docs(service.query(tokens['admin'], 'inventario')) == {'public'}"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac01_ac02_same_question_useful_different_permissions; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-058",
+    "requirement": "SECURITY",
+    "scenario": "test_ac03_ac11_sql_filters_before_payload_and_context",
+    "expected": [
+      "set(checked) == {'public', 'ops', 'injection'}",
+      "contexts and all((m[0]['role'] == 'system' for m in contexts))",
+      "forbidden not in json.dumps([result, contexts], ensure_ascii=False)"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac03_ac11_sql_filters_before_payload_and_context; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-059",
+    "requirement": "SECURITY",
+    "scenario": "test_ac04_ac05_direct_resource_access_denied[hr]",
+    "expected": [
+      "denied(404, lambda: service.download(tokens['ops'], resource))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac04_ac05_direct_resource_access_denied[hr]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-060",
+    "requirement": "SECURITY",
+    "scenario": "test_ac04_ac05_direct_resource_access_denied[other]",
+    "expected": [
+      "denied(404, lambda: service.download(tokens['ops'], resource))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac04_ac05_direct_resource_access_denied[other]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-061",
+    "requirement": "SECURITY",
+    "scenario": "test_ac04_ac05_direct_resource_access_denied[restricted]",
+    "expected": [
+      "denied(404, lambda: service.download(tokens['ops'], resource))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac04_ac05_direct_resource_access_denied[restricted]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-062",
+    "requirement": "SECURITY",
+    "scenario": "test_ac04_ac05_direct_resource_access_denied[not-existent]",
+    "expected": [
+      "denied(404, lambda: service.download(tokens['ops'], resource))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac04_ac05_direct_resource_access_denied[not-existent]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-063",
+    "requirement": "SECURITY",
+    "scenario": "test_ac06_direct_and_indirect_injection_do_not_grant",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['ops'], question))",
+      "'injection' in docs(service.query(tokens['ops'], 'inventario'))",
+      "docs(service.query(tokens['admin'], 'inventario')) == {'public'}",
+      "denied(404, lambda: service.download(tokens['ops'], 'hr'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac06_direct_and_indirect_injection_do_not_grant; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-064",
+    "requirement": "SECURITY",
+    "scenario": "test_ac07_grant_revocation_affects_query_download_history",
+    "expected": [
+      "'hr' in docs(service.query(tokens['hr'], 'inventario'))",
+      "b'NOMINA' in service.download(tokens['hr'], 'hr')",
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))",
+      "all((row['doc'] != 'hr' for row in service.history(tokens['hr'])))",
+      "denied(404, lambda: service.download(tokens['hr'], 'hr'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac07_grant_revocation_affects_query_download_history; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-065",
+    "requirement": "SECURITY",
+    "scenario": "test_ac07_token_revocation_and_principal_disable",
+    "expected": [
+      "'ops' in docs(service.query(new_token, 'inventario'))",
+      "denied(401, lambda: service.query(tokens['ops'], 'inventario'))",
+      "denied(401, lambda: service.download(new_token, 'public'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac07_token_revocation_and_principal_disable; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-066",
+    "requirement": "SECURITY",
+    "scenario": "test_ac08_history_is_owner_scoped",
+    "expected": [
+      "any((row['doc'] == 'hr' for row in service.history(tokens['hr'])))",
+      "service.history(tokens['ops']) == []",
+      "all((row['doc'] != 'hr' for row in service.history(tokens['ops'])))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac08_history_is_owner_scoped; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-067",
+    "requirement": "SECURITY",
+    "scenario": "test_ac09_rate_budget_survives_new_token_and_process",
+    "expected": [
+      "restarted.query(new_token, 'inventario')['passages']",
+      "denied(429, lambda: limited.download(token, 'public'))",
+      "denied(429, lambda: restarted.query(new_token, 'inventario'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac09_rate_budget_survives_new_token_and_process; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-068",
+    "requirement": "SECURITY",
+    "scenario": "test_ac09_concurrent_requests_really_bounded",
+    "expected": [
+      "resume.wait(5)",
+      "future.result()['passages']",
+      "entered.wait(5)",
+      "denied(429, lambda: limited.query(tokens['hr'], 'inventario'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac09_concurrent_requests_really_bounded; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-069",
+    "requirement": "SECURITY",
+    "scenario": "test_ac10_audit_records_decisions_without_secrets_or_prompts",
+    "expected": [
+      "{row[2] for row in rows} >= {'allowed', 'denied', 'unauthenticated'}",
+      "all((hashlib.sha256(t.encode()).hexdigest() in {r[0] for r in sessions} for t in tokens.values()))",
+      "all((t not in repr(rows) for t in tokens.values()))",
+      "'PREGUNTA-CANARIO' not in repr(rows)",
+      "question.encode() not in service.path.read_bytes()",
+      "denied(404, lambda: service.download(tokens['ops'], 'hr'))",
+      "denied(401, lambda: service.query('invalid', question))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac10_audit_records_decisions_without_secrets_or_prompts; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-070",
+    "requirement": "SECURITY",
+    "scenario": "test_ac12_delete_removes_access_context_and_history",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))",
+      "not any((r['doc'] == 'hr' for r in service.history(tokens['hr'])))",
+      "con.execute(\"SELECT count(*) FROM chunks WHERE doc='hr'\").fetchone()[0] == 0",
+      "con.execute(\"SELECT count(*) FROM grants WHERE doc='hr'\").fetchone()[0] == 0",
+      "denied(404, lambda: service.download(tokens['hr'], 'hr'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_ac12_delete_removes_access_context_and_history; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-071",
+    "requirement": "SECURITY",
+    "scenario": "test_update_revokes_old_evidence_and_grants",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))",
+      "not any((r['doc'] == 'hr' for r in service.history(tokens['hr'])))",
+      "'NUEVA-VERSION-FICTICIA' in json.dumps(result)",
+      "'NOMINA-FICTICIA-740' not in json.dumps(result)"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_update_revokes_old_evidence_and_grants; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-072",
+    "requirement": "SECURITY",
+    "scenario": "test_org_area_project_and_grant_are_all_required",
+    "expected": [
+      "'other' in docs(service.query(tokens['other'], 'inventario'))",
+      "'ops' not in docs(service.query(tokens['other'], 'inventario'))",
+      "denied(404, lambda user=user: service.download(tokens[user], 'hr'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_org_area_project_and_grant_are_all_required; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-073",
+    "requirement": "SECURITY",
+    "scenario": "test_unknown_classification_and_restricted_fail_closed[restricted]",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))",
+      "denied(404, lambda: service.download(tokens['hr'], 'hr'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_unknown_classification_and_restricted_fail_closed[restricted]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-074",
+    "requirement": "SECURITY",
+    "scenario": "test_unknown_classification_and_restricted_fail_closed[unknown]",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))",
+      "denied(404, lambda: service.download(tokens['hr'], 'hr'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_unknown_classification_and_restricted_fail_closed[unknown]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-075",
+    "requirement": "SECURITY",
+    "scenario": "test_unknown_classification_and_restricted_fail_closed[]",
+    "expected": [
+      "'hr' not in docs(service.query(tokens['hr'], 'inventario'))",
+      "denied(404, lambda: service.download(tokens['hr'], 'hr'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_unknown_classification_and_restricted_fail_closed[]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-076",
+    "requirement": "SECURITY",
+    "scenario": "test_public_requires_explicit_publication",
+    "expected": [
+      "denied(404, lambda: service.download(tokens['admin'], 'public'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_public_requires_explicit_publication; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-077",
+    "requirement": "SECURITY",
+    "scenario": "test_expired_and_spoofed_identity_rejected",
+    "expected": [
+      "denied(401, lambda invalid=invalid: clocked.query(invalid, 'inventario'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_expired_and_spoofed_identity_rejected; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-078",
+    "requirement": "SECURITY",
+    "scenario": "test_application_credential_capabilities_separate",
+    "expected": [
+      "'ops' in docs(service.query(tokens['app'], 'inventario'))",
+      "denied(403, lambda: service.download(tokens['app'], 'ops'))",
+      "denied(403, lambda: service.history(tokens['app']))",
+      "denied(401, lambda: service.query(tokens['app'], 'inventario'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_application_credential_capabilities_separate; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-079",
+    "requirement": "SECURITY",
+    "scenario": "test_corrupt_authorized_payload_and_document_rejected",
+    "expected": [
+      "'hr' in docs(service.query(tokens['hr'], 'inventario'))"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_corrupt_authorized_payload_and_document_rejected; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-080",
+    "requirement": "SECURITY",
+    "scenario": "test_http_real_auth_query_download_and_no_store",
+    "expected": [
+      "api('POST', '/query', body={'question': 'inventario'})[0] == 401",
+      "status == 200 and 'ops' in docs(json.loads(raw))",
+      "headers['Cache-Control'] == 'no-store'",
+      "api('GET', '/documents/ops', user='ops')[0] == 200",
+      "forbidden[0] == missing[0] == 404 and forbidden[2] == missing[2]",
+      "api('GET', '/documents/hr')[0] == 401"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_real_auth_query_download_and_no_store; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-081",
+    "requirement": "SECURITY",
+    "scenario": "test_http_rejects_identity_in_body_and_oversized_input[body0]",
+    "expected": [
+      "api('POST', '/query', user='ops', body=body)[0] == 400"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_rejects_identity_in_body_and_oversized_input[body0]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-082",
+    "requirement": "SECURITY",
+    "scenario": "test_http_rejects_identity_in_body_and_oversized_input[body1]",
+    "expected": [
+      "api('POST', '/query', user='ops', body=body)[0] == 400"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_rejects_identity_in_body_and_oversized_input[body1]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-083",
+    "requirement": "SECURITY",
+    "scenario": "test_http_rejects_identity_in_body_and_oversized_input[body2]",
+    "expected": [
+      "api('POST', '/query', user='ops', body=body)[0] == 400"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_rejects_identity_in_body_and_oversized_input[body2]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-084",
+    "requirement": "SECURITY",
+    "scenario": "test_http_rejects_identity_in_body_and_oversized_input[body3]",
+    "expected": [
+      "api('POST', '/query', user='ops', body=body)[0] == 400"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_rejects_identity_in_body_and_oversized_input[body3]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-085",
+    "requirement": "SECURITY",
+    "scenario": "test_http_no_alternate_unprotected_channel[/documents/../hr]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/documents/../hr]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-086",
+    "requirement": "SECURITY",
+    "scenario": "test_http_no_alternate_unprotected_channel[/documents/%68r]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/documents/%68r]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-087",
+    "requirement": "SECURITY",
+    "scenario": "test_http_no_alternate_unprotected_channel[/index]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/index]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-088",
+    "requirement": "SECURITY",
+    "scenario": "test_http_no_alternate_unprotected_channel[/export]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/export]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-089",
+    "requirement": "SECURITY",
+    "scenario": "test_http_no_alternate_unprotected_channel[/query?token=ops]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/query?token=ops]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-090",
+    "requirement": "SECURITY",
+    "scenario": "test_http_no_alternate_unprotected_channel[/history?user=hr]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/history?user=hr]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-091",
+    "requirement": "SECURITY",
+    "scenario": "test_http_no_alternate_unprotected_channel[/admin/grants]",
+    "expected": [
+      "api('GET', path, user='ops')[0] == 404"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_no_alternate_unprotected_channel[/admin/grants]; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-092",
+    "requirement": "SECURITY",
+    "scenario": "test_http_origin_and_host_validation",
+    "expected": [
+      "api('GET', '/history', user='ops', headers={'Origin': 'https://evil.invalid'})[0] == 403",
+      "api('GET', '/history', user='ops', headers={'Host': 'evil.invalid'})[0] == 403"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_http_origin_and_host_validation; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-093",
+    "requirement": "SECURITY",
+    "scenario": "test_server_refuses_network_bind",
+    "expected": [
+      "Completar contrato y excepciones declaradas en prueba fuente."
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_security_lab.py::test_server_refuses_network_bind; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-094",
+    "requirement": "SEMANTIC",
+    "scenario": "test_real_pdf_and_pinned_multilingual_model",
+    "expected": [
+      "built['dimensions'] == 384 and built['pages'] == 2",
+      "hits and hits[0].chunk.page == 47",
+      "any(('defectos' in hit.chunk.text for hit in hits))",
+      "len(hits[0].chunk.document_sha256) == 64"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_semantic_integration.py::test_real_pdf_and_pinned_multilingual_model; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-095",
+    "requirement": "SEMANTIC",
+    "scenario": "test_direct_runtime_matches_frozen_fastembed_reference",
+    "expected": [
+      "values.shape == (3, 384)",
+      "np.allclose(values, reference['vectors'], atol=1e-06, rtol=1e-06)",
+      "np.allclose(np.linalg.norm(values, axis=1), 1, atol=1e-06)"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_semantic_runtime.py::test_direct_runtime_matches_frozen_fastembed_reference; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-096",
+    "requirement": "SEMANTIC",
+    "scenario": "test_direct_runtime_empty_batch_and_input_budget",
+    "expected": [
+      "encoder.encode([]).shape == (0, 384)"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_semantic_runtime.py::test_direct_runtime_empty_batch_and_input_budget; reports/freg002/locked-suite.xml"
+  },
+  {
+    "id": "F002-097",
+    "requirement": "SEMANTIC",
+    "scenario": "test_direct_runtime_token_count_not_affected_by_batch_padding",
+    "expected": [
+      "values.shape == (2, 384) and np.isfinite(values).all()",
+      "encoder.token_count('inventario') == before"
+    ],
+    "observed": "Aserciones de pytest satisfechas.",
+    "status": "PASS",
+    "evidence": "tests/test_semantic_runtime.py::test_direct_runtime_token_count_not_affected_by_batch_padding; reports/freg002/locked-suite.xml"
+  }
+]

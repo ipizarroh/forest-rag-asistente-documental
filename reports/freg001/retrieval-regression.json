@@ -1,0 +1,787 @@
+{
+  "version": "FREG-CRITICAL-001",
+  "base_commit": "eee8da5035340abef011357e5f85ad7b2fc34bc3",
+  "method": "Regresión de 30 preguntas conocidas; reglas y parámetros históricos, no nueva validación ciega.",
+  "archive_sha256": "fbba88be1b62cc4fc6fc28244f2dc88e411883ae0631669afa4288dcc98098ed",
+  "cases_sha256": "40d3f0f122450e790d358db878a526d10d09ac95cad24a9b070425ec6d44cb23",
+  "chunk_count": 33,
+  "reference_reconciliation": [
+    {
+      "id": "R04",
+      "old_words": [
+        177,
+        208
+      ],
+      "new_words": [
+        176,
+        207
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R05",
+      "old_words": [
+        210,
+        248
+      ],
+      "new_words": [
+        209,
+        247
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R06",
+      "old_words": [
+        401,
+        419
+      ],
+      "new_words": [
+        400,
+        418
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R07",
+      "old_words": [
+        419,
+        495
+      ],
+      "new_words": [
+        418,
+        494
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R08",
+      "old_words": [
+        583,
+        621
+      ],
+      "new_words": [
+        582,
+        620
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R09",
+      "old_words": [
+        621,
+        664
+      ],
+      "new_words": [
+        620,
+        663
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R10",
+      "old_words": [
+        686,
+        730
+      ],
+      "new_words": [
+        685,
+        729
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R11",
+      "old_words": [
+        25,
+        77
+      ],
+      "new_words": [
+        25,
+        76
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R12",
+      "old_words": [
+        77,
+        94
+      ],
+      "new_words": [
+        76,
+        93
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R13",
+      "old_words": [
+        169,
+        201
+      ],
+      "new_words": [
+        168,
+        200
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R14",
+      "old_words": [
+        306,
+        351
+      ],
+      "new_words": [
+        305,
+        350
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R15",
+      "old_words": [
+        375,
+        401
+      ],
+      "new_words": [
+        374,
+        400
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R16",
+      "old_words": [
+        480,
+        503
+      ],
+      "new_words": [
+        479,
+        502
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R17",
+      "old_words": [
+        503,
+        518
+      ],
+      "new_words": [
+        502,
+        517
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R18",
+      "old_words": [
+        244,
+        287
+      ],
+      "new_words": [
+        243,
+        286
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R19",
+      "old_words": [
+        588,
+        640
+      ],
+      "new_words": [
+        587,
+        639
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    },
+    {
+      "id": "R20",
+      "old_words": [
+        640,
+        679
+      ],
+      "new_words": [
+        639,
+        678
+      ],
+      "reason": "Sólo espacios de extracción; texto sin espacios idéntico."
+    }
+  ],
+  "summary": {
+    "all": {
+      "cases": 30,
+      "pass": 19,
+      "fail": 11,
+      "relevant": [
+        17,
+        20
+      ],
+      "complete": [
+        12,
+        20
+      ],
+      "abstention": [
+        7,
+        10
+      ],
+      "latency_median_ms": 12.4925
+    },
+    "historical_final": {
+      "cases": 20,
+      "pass": 15,
+      "fail": 5,
+      "relevant": [
+        11,
+        14
+      ],
+      "complete": [
+        10,
+        14
+      ],
+      "abstention": [
+        5,
+        6
+      ],
+      "latency_median_ms": 12.5715
+    }
+  },
+  "rows": [
+    {
+      "id": "R01",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "development",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 12.54
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "1191bfceb559befc688e2eaa",
+        "f948f85ed4f917a9acb27128",
+        "88032fa98e285826303ba332"
+      ]
+    },
+    {
+      "id": "R02",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "development",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 0.5333333333333333,
+        "abstained": false,
+        "latency_ms": 12.569
+      },
+      "status": "FAIL",
+      "hit_ids": [
+        "8c7b6481f8f46f82973076b5",
+        "25a7e8fbd961c3969c294608",
+        "302409030c6fe6f5d704814f"
+      ]
+    },
+    {
+      "id": "R03",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "development",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 0.3793103448275862,
+        "abstained": false,
+        "latency_ms": 13.798
+      },
+      "status": "FAIL",
+      "hit_ids": [
+        "25a7e8fbd961c3969c294608",
+        "8c7b6481f8f46f82973076b5",
+        "bc2165f409621fa65f746566"
+      ]
+    },
+    {
+      "id": "R04",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "development",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 0.8709677419354839,
+        "abstained": false,
+        "latency_ms": 10.748
+      },
+      "status": "FAIL",
+      "hit_ids": [
+        "302409030c6fe6f5d704814f",
+        "f948f85ed4f917a9acb27128",
+        "b6c38bbbb078900fc5668d68"
+      ]
+    },
+    {
+      "id": "R05",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "development",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 12.767
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "7bbe9f93056a307f21e459ea",
+        "302409030c6fe6f5d704814f",
+        "8c7b6481f8f46f82973076b5"
+      ]
+    },
+    {
+      "id": "R06",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "development",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 0.8333333333333334,
+        "abstained": false,
+        "latency_ms": 11.503
+      },
+      "status": "FAIL",
+      "hit_ids": [
+        "330ba5b2e3e6d5866ade26c2"
+      ]
+    },
+    {
+      "id": "R07",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 12.373
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "8c7b6481f8f46f82973076b5",
+        "25a7e8fbd961c3969c294608",
+        "b6c38bbbb078900fc5668d68"
+      ]
+    },
+    {
+      "id": "R08",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 11.331
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "0691e2e48a17fcdc168d6748",
+        "8a136e0295cff2553891ab9b",
+        "25a7e8fbd961c3969c294608"
+      ]
+    },
+    {
+      "id": "R09",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": false,
+        "coverage": 0.0,
+        "abstained": false,
+        "latency_ms": 10.036
+      },
+      "status": "FAIL",
+      "hit_ids": [
+        "8c7b6481f8f46f82973076b5",
+        "25a7e8fbd961c3969c294608",
+        "8a136e0295cff2553891ab9b"
+      ]
+    },
+    {
+      "id": "R10",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 10.739
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "20e92d4a9aa7b182e35d8d8f",
+        "f948f85ed4f917a9acb27128",
+        "288e5eda844f1a2ad9b1a6d8"
+      ]
+    },
+    {
+      "id": "R11",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 0.6078431372549019,
+        "abstained": false,
+        "latency_ms": 10.66
+      },
+      "status": "FAIL",
+      "hit_ids": [
+        "f6acacd423a9ab07ac2d558d",
+        "8a6af0d59d865ead002a6329",
+        "63ade09d8fbce07cd9c3ab94"
+      ]
+    },
+    {
+      "id": "R12",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 13.476
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "05fd75ba1b0a997f7b638897",
+        "f9e76d72caa0853afcaef141",
+        "f6acacd423a9ab07ac2d558d"
+      ]
+    },
+    {
+      "id": "R13",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": false,
+        "coverage": 0.0,
+        "abstained": false,
+        "latency_ms": 13.777
+      },
+      "status": "FAIL",
+      "hit_ids": [
+        "63ade09d8fbce07cd9c3ab94",
+        "f610e118b77a26d536f99e88",
+        "4b19785575ec6a17f6f0d866"
+      ]
+    },
+    {
+      "id": "R14",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": false,
+        "coverage": 0.0,
+        "abstained": true,
+        "latency_ms": 11.314
+      },
+      "status": "FAIL",
+      "hit_ids": []
+    },
+    {
+      "id": "R15",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 11.312
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "6d6915176bbe7c00c79c29e8",
+        "63ade09d8fbce07cd9c3ab94",
+        "8a6af0d59d865ead002a6329"
+      ]
+    },
+    {
+      "id": "R16",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 10.948
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "bc2165f409621fa65f746566",
+        "d252925450b3c33ce4d34e8c",
+        "17833dabf53a66b24d9ed8e4"
+      ]
+    },
+    {
+      "id": "R17",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 9.843
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "17833dabf53a66b24d9ed8e4"
+      ]
+    },
+    {
+      "id": "R18",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 13.998
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "def555966c948978feb31263",
+        "8a6af0d59d865ead002a6329",
+        "0450bc69225da66494f6ba87"
+      ]
+    },
+    {
+      "id": "R19",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 12.852
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "a8528986d26d8ad3841ad1de",
+        "f948f85ed4f917a9acb27128",
+        "f6acacd423a9ab07ac2d558d"
+      ]
+    },
+    {
+      "id": "R20",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": true,
+      "expected": "Recuperar evidencia completa y trazable, sin exigir síntesis LLM.",
+      "observed": {
+        "relevant": true,
+        "coverage": 1.0,
+        "abstained": false,
+        "latency_ms": 12.77
+      },
+      "status": "PASS",
+      "hit_ids": [
+        "4b19785575ec6a17f6f0d866",
+        "8a6af0d59d865ead002a6329",
+        "63ade09d8fbce07cd9c3ab94"
+      ]
+    },
+    {
+      "id": "R21",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "development",
+      "answerable": false,
+      "expected": "Abstenerse: sin respuesta demostrable en las dos páginas.",
+      "observed": {
+        "relevant": false,
+        "coverage": null,
+        "abstained": true,
+        "latency_ms": 12.445
+      },
+      "status": "PASS",
+      "hit_ids": []
+    },
+    {
+      "id": "R22",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "development",
+      "answerable": false,
+      "expected": "Abstenerse: sin respuesta demostrable en las dos páginas.",
+      "observed": {
+        "relevant": false,
+        "coverage": null,
+        "abstained": true,
+        "latency_ms": 14.715
+      },
+      "status": "PASS",
+      "hit_ids": []
+    },
+    {
+      "id": "R23",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "development",
+      "answerable": false,
+      "expected": "Abstenerse: sin respuesta demostrable en las dos páginas.",
+      "observed": {
+        "relevant": false,
+        "coverage": null,
+        "abstained": false,
+        "latency_ms": 11.464
+      },
+      "status": "FAIL",
+      "hit_ids": [
+        "d252925450b3c33ce4d34e8c",
+        "17833dabf53a66b24d9ed8e4",
+        "bc2165f409621fa65f746566"
+      ]
+    },
+    {
+      "id": "R24",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "development",
+      "answerable": false,
+      "expected": "Abstenerse: sin respuesta demostrable en las dos páginas.",
+      "observed": {
+        "relevant": false,
+        "coverage": null,
+        "abstained": false,
+        "latency_ms": 11.076
+      },
+      "status": "FAIL",
+      "hit_ids": [
+        "f9e76d72caa0853afcaef141",
+        "8c7b6481f8f46f82973076b5"
+      ]
+    },
+    {
+      "id": "R25",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": false,
+      "expected": "Abstenerse: sin respuesta demostrable en las dos páginas.",
+      "observed": {
+        "relevant": false,
+        "coverage": null,
+        "abstained": true,
+        "latency_ms": 14.222
+      },
+      "status": "PASS",
+      "hit_ids": []
+    },
+    {
+      "id": "R26",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": false,
+      "expected": "Abstenerse: sin respuesta demostrable en las dos páginas.",
+      "observed": {
+        "relevant": false,
+        "coverage": null,
+        "abstained": true,
+        "latency_ms": 20.717
+      },
+      "status": "PASS",
+      "hit_ids": []
+    },
+    {
+      "id": "R27",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": false,
+      "expected": "Abstenerse: sin respuesta demostrable en las dos páginas.",
+      "observed": {
+        "relevant": false,
+        "coverage": null,
+        "abstained": true,
+        "latency_ms": 15.593
+      },
+      "status": "PASS",
+      "hit_ids": []
+    },
+    {
+      "id": "R28",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": false,
+      "expected": "Abstenerse: sin respuesta demostrable en las dos páginas.",
+      "observed": {
+        "relevant": false,
+        "coverage": null,
+        "abstained": false,
+        "latency_ms": 15.455
+      },
+      "status": "FAIL",
+      "hit_ids": [
+        "25a7e8fbd961c3969c294608",
+        "8c7b6481f8f46f82973076b5",
+        "302409030c6fe6f5d704814f"
+      ]
+    },
+    {
+      "id": "R29",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": false,
+      "expected": "Abstenerse: sin respuesta demostrable en las dos páginas.",
+      "observed": {
+        "relevant": false,
+        "coverage": null,
+        "abstained": true,
+        "latency_ms": 8.41
+      },
+      "status": "PASS",
+      "hit_ids": []
+    },
+    {
+      "id": "R30",
+      "requirement": "F01 recuperación/completitud/abstención",
+      "split_historico": "final",
+      "answerable": false,
+      "expected": "Abstenerse: sin respuesta demostrable en las dos páginas.",
+      "observed": {
+        "relevant": false,
+        "coverage": null,
+        "abstained": true,
+        "latency_ms": 16.416
+      },
+      "status": "PASS",
+      "hit_ids": []
+    }
+  ]
+}

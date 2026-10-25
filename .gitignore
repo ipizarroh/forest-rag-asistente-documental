@@ -1,6 +1,20 @@
-dist/
-reports/
+.venv/
+.venv-lab/
+.venv-freg002/
+# Archivo histórico conservado en la entrega privada; excluido de publicación pública.
+docs/history/EVIDENCIAS_AUDITORIA_FORESTRAG.zip
 __pycache__/
+*.py[cod]
 .pytest_cache/
 *.egg-info/
-.venv/
+.env
+.env.*
+!.env.example
+data/
+*.db
+*.sqlite*
+*.log
+dist/
+build/
+~/
+

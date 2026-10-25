@@ -1,0 +1,91 @@
+{
+  "browser": "Chromium-compatible headless / Playwright 1.62.1",
+  "viewports": [
+    "1440x1080",
+    "390x844"
+  ],
+  "checks": [
+    {
+      "id": "UI01",
+      "scenario": "anonymous desktop opens verified corpus",
+      "status": "PASS"
+    },
+    {
+      "id": "UI02",
+      "scenario": "suggested query returns real evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "UI03",
+      "scenario": "citation opens matching full source",
+      "status": "PASS"
+    },
+    {
+      "id": "UI04",
+      "scenario": "unanswerable query abstains",
+      "status": "PASS"
+    },
+    {
+      "id": "UI05",
+      "scenario": "hostile input executes no code or query requests",
+      "status": "PASS"
+    },
+    {
+      "id": "UI06",
+      "scenario": "document selector constrains evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "UI07",
+      "scenario": "per-tab pacing is enforced by UI",
+      "status": "PASS"
+    },
+    {
+      "id": "UI08",
+      "scenario": "no browser page errors",
+      "status": "PASS"
+    },
+    {
+      "id": "UI09",
+      "scenario": "390px mobile layout and query",
+      "status": "PASS"
+    },
+    {
+      "id": "UI10",
+      "scenario": "altered payload blocks UI before any evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "UI11",
+      "scenario": "review server exposes no private or write route",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8768/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8768/style.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8768/app.mjs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8768/engine.mjs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8768/release.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8768/corpus.json"
+    }
+  ]
+}

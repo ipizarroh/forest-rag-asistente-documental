@@ -1,0 +1,33 @@
+{
+  "python": "3.12.3",
+  "platform": "Windows",
+  "source_baseline": "a4b148f524127d23929074b62d4329bd4b8ee769",
+  "browser_attempts": [
+    {
+      "browser": "Edge",
+      "status": "BLOCKED",
+      "reason": "isolated browser launch failed in this runtime; no OS settings changed"
+    },
+    {
+      "browser": "Edge with task TEMP/TMP",
+      "status": "BLOCKED",
+      "reason": "same launch limitation"
+    },
+    {
+      "browser": "Chrome headless",
+      "status": "PASS",
+      "evidence": "browser.json"
+    }
+  ],
+  "not_run": [
+    "Streamlit tests (2; dependency not installed)",
+    "real semantic integration (4 deselected)",
+    "fresh clean dependency installation",
+    "current vulnerability scanner",
+    "remote CI",
+    "hosted deployment and external URL",
+    "public load or DDoS testing",
+    "host configuration and ACL audit",
+    "real LLM inference"
+  ]
+}

@@ -1,1 +1,7 @@
-* text=auto eol=lf
+# Reproducible text and exact fixture bytes across platforms.
+*.md text eol=lf
+*.lock text eol=lf
+public_demo/** text eol=lf
+reports/public_arch001/** text eol=lf
+tests/test_public_demo.py text eol=lf
+tests/fixtures/** -text

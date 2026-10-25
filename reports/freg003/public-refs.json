@@ -1,0 +1,7 @@
+{
+  "main": "eee8da5035340abef011357e5f85ad7b2fc34bc3",
+  "freg-critical-001": "8088aa567293b021fc2ed265b256ea718c5cb9b9",
+  "freg-002-hardening": null,
+  "freg-003-readme": null,
+  "source": "git ls-remote, 2026-10-23; read-only"
+}
