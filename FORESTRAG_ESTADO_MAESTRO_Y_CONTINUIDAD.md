@@ -1,5 +1,13 @@
 # ForestRAG — Estado maestro y continuidad
 
+## Actualización FREG-PUBLIC-ARCH-001-GO
+
+VERIFICADO: fuente completa revisada en freg-public-arch-001, ejecución web desde 7abc2a7 y artefacto gh-pages e0c6717. URL https://ipizarroh.github.io/forest-rag-asistente-documental/. CI validó a4426a6: 106 pruebas por entorno Python, 13 de build, 15 Node y 12 externas. main sin cambios. Confianza alta para este alcance; suites solapadas y cuatro pruebas de integración semántica no ejecutadas.
+
+El propietario aprobó rama y Pages y solicitó todos los archivos publicables. Se excluyó el documento de origen privado y se retiraron referencias privadas. No se publican modelos, bases privadas, secretos ni información empresarial. Publicar código no convierte el laboratorio en servicio empresarial.
+
+Procedencia: [FORESTRAG_INFORME_PUBLICACION_GO_001.md](FORESTRAG_INFORME_PUBLICACION_GO_001.md), reports/public_go001/ci.json y browser-external.json. Se conservan FREG-SAH-001, A2-03/A3-02 y los identificadores históricos. Este corte prevalece para publicación; el resto mantiene sus fechas y alcance.
+
 ## Estado vigente - FREG-PUBLIC-ARCH-001, 24-10-2026
 
 Entrada de navegación: [PROJECT_STATUS.md](PROJECT_STATUS.md). La cronología inferior se conserva como cortes anteriores, no como estado automáticamente actualizado.

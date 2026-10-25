@@ -12,9 +12,9 @@ P0/P1 se refieren al uso indicado, no severidad universal. ComplejidadB/M/A rela
 | PUB04 | A3-02/S2, P01/P02/P06, SAH03 | Excluir fuente al reconstruir demo | PUB03 / P0 para nuevo paquete / M /0 | corpus,build,test_retirement | Sinid/texto/fragmentos retirados; digestnuevo | VERIFICADO limitado; no cierra restore/cachés/privados |
 | PUB05 | A5/S4, P06/P10 | Probar sin instalar y revisar fuentes | PUB03 / P1 / M /0 | web/,browser.json | Consulta/sugerencias/citas/abstención y390px | VERIFICADO Chrome; revisión humana pendiente |
 | PUB06 | S2/S4, P04/P10, SAH07/14 | Reducir ejecución/filtración/abuso | PUB03/04 / P0 publicación / M /0 | security,engine,tests | Corpusprivado/alterado rechazado, inputsacotados, sin API/tools | VERIFICADO cliente; cuotas/headers reales pendientes |
-| PUB07 | A1/S4, P09, SAH05/18 | CI revisable y promoción controlada | PUB03/06 / P1 / M /0 enrepo público | public-demo-tests.yml, draftdeploy | SHAacciones,readonlytests; CI Linux verde antes de publicar | PREPARADO, NOT RUN remoto |
-| PUB08 | A5/S4, P09/P10 | ObtenerURL exacta aprobada | PUB07+propietario / P1 / B-M /0 propuesto | Pagesartifactbranch,guía | Sólo7assets,HTTPS,URLexterna verificada,READMEenlace real | BLOQUEADO por aprobación; no URLinventada |
-| PUB09 | S4, P07/P10, SAH14/17 | Medir uso/retirar/revertir sin revivir fuentes | PUB08+SAH03 / P1 / M /0 propuesto | release,rollback,monitoreo | Visita externa,errores/banda,shutdown; vigencia corpus | PROPUESTO; ensayo proveedor pendiente |
+| PUB07 | A1/S4, P09, SAH05/18 | CI y promoción controlada | PUB03/06 / P1 / M /0 | workflows y lock de pruebas | Tests, build y navegador externo PASS | VERIFICADO; conservar control de promoción |
+| PUB08 | A5/S4, P09/P10 | URL pública exacta | PUB07+aprobación otorgada / P1 / B-M /0 | gh-pages, guía, CI externo | Siete assets; HTTPS, consultas, citas y móvil PASS | VERIFICADO; https://ipizarroh.github.io/forest-rag-asistente-documental/ |
+| PUB09 | S4, P07/P10, SAH14/17 | Monitorear y revertir con corpus vigente | PUB08+SAH03 / P1 / M /0 | recibo, manifiesto y monitoreo | Visita externa PASS; retiro/restore y ensayo de rollback pendientes | PARCIAL; continuar FREG-SAH-001 |
 | PUB10 | A4/B/S3, P03/P05/P10, SAH11/12 | Semántica/generaciónreal online | A1/A2/A3estables, nuevo banco / P2demo / A /por evaluar | servidorStreamlit/ONNX y banco | RAM/cold/warm/carga; citas y contexto real | PROPUESTO; no atribuir a demo estática |
 
 ## Secuencia y dependencia con el plan histórico
@@ -24,3 +24,7 @@ Primero preservar código y evidencia, crear candidata pública mínima y valida
 El mandato actual autoriza expresamente trabajoA5 online en paralelo. ControlCR-PUB-001 registra ese cambio frente al roadmap de investigación que desaconsejaba UI antes deSAH. La excepción sólo cubre el artefacto sintético sin backend; no cambia los gates de plataforma protegida.
 
 Siguientes criterios concretos: PUB08 URLexterna HTTPS válida sin registro, tresconsultas y cita comprobadas; SHA/manifest visible igual al aprobado; denegación de rutas privadas; archivos publicadosexactos; prueba de volver al códigoprevio con corpus vigente; registrar cuota y responsable. Si un punto falla, mantenerNO-GO para ampliar exposición.
+
+## Actualización de publicación
+
+PUB07 y PUB08 verificados en GitHub tras autorización. Fuente web 7abc2a7; artefacto e0c6717; validación a4426a6. PUB09 parcial: sin ensayo de reversión ni medición de cuotas. PUB10 propuesto. [Evidencia](FORESTRAG_INFORME_PUBLICACION_GO_001.md). Las frases anteriores sobre bloqueo por aprobación son históricas.

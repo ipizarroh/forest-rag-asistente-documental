@@ -1,5 +1,7 @@
 # ForestRAG: informe FREG-PUBLIC-ARCH-001
 
+**Corte histórico de implementación local.** La publicación fue aprobada y ejecutada después. [FORESTRAG_INFORME_PUBLICACION_GO_001.md](FORESTRAG_INFORME_PUBLICACION_GO_001.md) contiene URL real, SHA y CI. Sus apartados sobre aprobación pendiente o ausencia de publicación describen el corte anterior.
+
 Fecha: 24 de octubre de 2026, America/Santiago. Proyecto personal independiente de ARAUCO. Estados: VERIFICADO, HISTÓRICO, DECLARADO, PROPUESTO, NO VERIFICADO y BLOQUEADO.
 
 ## A. Viabilidad online

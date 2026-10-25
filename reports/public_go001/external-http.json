@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-10-25T02:21:43.272195+00:00",
+  "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/",
+  "transport": "HTTPS, default certificate verification enabled",
+  "source_commit": "7abc2a7133662ff811bfcdf0c09866cad31cc5ef",
+  "artifact_commit": "e0c6717d97470d5b3a0be1b2b251147c15ea1f57",
+  "status": "PASS",
+  "assets": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/index.html",
+      "bytes": 4271,
+      "sha256": "9a057c9d7b8d945e9ca70f1fe2f335f0f72c8232f3924b111ca9d80f60de0a7e",
+      "matches_pinned_artifact": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "max-age=600",
+        "Strict-Transport-Security": "max-age=31556952"
+      }
+    },
+    {
+      "path": "app.mjs",
+      "status": 200,
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/app.mjs",
+      "bytes": 3129,
+      "sha256": "88b8fda5413c4c18c2c56da2f8ae3791e43d5c762dbc116ff83c2be886b3e5df",
+      "matches_pinned_artifact": true,
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "max-age=600",
+        "Strict-Transport-Security": "max-age=31556952"
+      }
+    },
+    {
+      "path": "engine.mjs",
+      "status": 200,
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/engine.mjs",
+      "bytes": 6337,
+      "sha256": "23b23956f51b8b36c1d6bf9f243559698f5fa54eeb90da569083c8a146f62d21",
+      "matches_pinned_artifact": true,
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "max-age=600",
+        "Strict-Transport-Security": "max-age=31556952"
+      }
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/style.css",
+      "bytes": 4697,
+      "sha256": "29e560133af93ecde9056d923e3239ff37ccc6be1e017f2d77e2d396ed4111e8",
+      "matches_pinned_artifact": true,
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Cache-Control": "max-age=600",
+        "Strict-Transport-Security": "max-age=31556952"
+      }
+    },
+    {
+      "path": "corpus.json",
+      "status": 200,
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/corpus.json",
+      "bytes": 10146,
+      "sha256": "40aa13079580a1d121b0e86fb6bda0f33e004e93fd06910906d0b7ad899f9193",
+      "matches_pinned_artifact": true,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "max-age=600",
+        "Strict-Transport-Security": "max-age=31556952"
+      }
+    },
+    {
+      "path": "release.json",
+      "status": 200,
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/release.json",
+      "bytes": 2745,
+      "sha256": "694c2e4c88f8550379ac7c9b3541881ce63b2941915337f0e7e56153844afb9f",
+      "matches_pinned_artifact": true,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "max-age=600",
+        "Strict-Transport-Security": "max-age=31556952"
+      }
+    }
+  ]
+}

@@ -107,3 +107,13 @@ CONDICIONES dentro de la guía. Piloto con datos reales y operación empresarial
 NO-GO. Los umbrales históricos propuestos de piloto (recall ≥85%, completitud ≥80%,
 abstención ≥90%) son internos, no política ARAUCO, y no bastan para seguridad legal/
 operacional. Pasar pytest o usar OWASP/NIST no certifica cumplimiento.
+
+## CR-PUB-002: publicación ejecutada
+
+Origen: aprobación FREG-PUBLIC-ARCH-001-GO y solicitud explícita de código completo publicable. Fecha 24-10-2026 America/Santiago. Se conserva CR-PUB-001 y A1-A5/B, S0-S4, SAH01-18.
+
+PUB07/PUB08 VERIFICADOS: fuente completa revisada en freg-public-arch-001, sólo siete assets en gh-pages. CI y 12 pruebas externas PASS; https://ipizarroh.github.io/forest-rag-asistente-documental/. Fuente web 7abc2a7, artefacto e0c6717. [Evidencia](FORESTRAG_INFORME_PUBLICACION_GO_001.md).
+
+PUB09 PARCIAL: monitoreo y ensayo de reversión pendientes. FREG-SAH-001 continúa para la plataforma protegida: autoridades de confianza, retiro documental, invalidación de canales y restore sin reactivar permisos. Después identidad empresarial, calidad con banco reservado y generación real, según dependencias históricas. La demo no habilita datos confidenciales.
+
+main intacto, sin compras ni servicios nuevos. No se repiten las aprobaciones ya otorgadas. Cambios futuros a main, datos reales o gasto requieren autorización de su alcance.

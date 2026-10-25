@@ -1,0 +1,38 @@
+{
+  "validated_source_commit": "a4426a611077453031128c31a64e45b9fc45d86c",
+  "runtime_source_commit": "7abc2a7133662ff811bfcdf0c09866cad31cc5ef",
+  "artifact_commit": "e0c6717d97470d5b3a0be1b2b251147c15ea1f57",
+  "main_unchanged": "eee8da5035340abef011357e5f85ad7b2fc34bc3",
+  "runs": [
+    {
+      "id": 40154113712,
+      "name": "Public demo candidate checks",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/ipizarroh/forest-rag-asistente-documental/actions/runs/40154113712",
+      "head_sha": "a4426a611077453031128c31a64e45b9fc45d86c"
+    },
+    {
+      "id": 40154113711,
+      "name": "Public demo live checks",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/ipizarroh/forest-rag-asistente-documental/actions/runs/40154113711",
+      "head_sha": "a4426a611077453031128c31a64e45b9fc45d86c"
+    },
+    {
+      "id": 40154113668,
+      "name": "Tests",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/ipizarroh/forest-rag-asistente-documental/actions/runs/40154113668",
+      "head_sha": "a4426a611077453031128c31a64e45b9fc45d86c"
+    }
+  ],
+  "deployment": {
+    "id": 40153806543,
+    "conclusion": "success",
+    "url": "https://github.com/ipizarroh/forest-rag-asistente-documental/actions/runs/40153806543"
+  },
+  "scope": "Counts are per environment/run; overlapping suites must not be added together."
+}

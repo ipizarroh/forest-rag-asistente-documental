@@ -59,7 +59,7 @@ Dos rutas de publicación preparadas conceptualmente:
 1. Primera demo sin modificar main: tras publicar la rama fuente y aprobarCI, crear una rama de artefacto dedicada con sólo los siete assets. Configurar Pages para esa rama y raíz. Cada actualización requiere build y aprobación; esa rama no es rama de desarrollo ni fuente canónica.
 2. Evolución Actions: public_demo/deploy-pages.yml.example es un borrador inactivo. Para habilitar workflow_dispatch enGitHub deberá existir en la rama por defecto; incorporarlo a main requiere autorización adicional. Debe configurarse previamente el entorno forestrag-public-demo y sus revisores/reglas: nombrarlo enYAML no crea protección efectiva. Se fija un SHA fuente exacto, permisos mínimos, build/test y directorio allowlist.
 
-El workflow CI de pruebas sí está preparado bajo .github/workflows, pero no se ejecutó remotamente. Las acciones están fijadas a SHA40 verificados en GitHub; revisar también sus dependencias y el runner. Los permisos de despliegue no aparecen en el job de pruebas.
+El workflow de pruebas se ejecutó y pasó en GitHub para a4426a6; la evidencia está en FORESTRAG_INFORME_PUBLICACION_GO_001.md. Las acciones están fijadas a SHA40 verificados en GitHub; revisar también sus dependencias y el runner. Los permisos de despliegue no aparecen en el job de pruebas.
 
 ## Reversión y retirada
 
@@ -68,3 +68,9 @@ Un fallo funcional permite volver al código revisado anterior, reconstruyendo c
 La prueba local demuestra que reconstruir sin una fuente elimina sus fragmentos del paquete. No demuestra invalidación global de descargas/cachés, ni resistencia a rollback por un publicador comprometido. Copias públicas ya descargadas no pueden revocarse. Datos confidenciales quedan fuera de esta arquitectura.
 
 Fuentes: https://semver.org/ ; https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases ; https://docs.github.com/en/actions/reference/security/secure-use ; https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments . Consulta24-10-2026.
+
+## Despliegue verificado FREG-PUBLIC-ARCH-001-GO
+
+Fuente web 7abc2a7133662ff811bfcdf0c09866cad31cc5ef; artefacto e0c6717d97470d5b3a0be1b2b251147c15ea1f57 en gh-pages; demo-0.1.0-rc.1. URL https://ipizarroh.github.io/forest-rag-asistente-documental/. CI externo 40154113711: 12 PASS; seis archivos HTTPS idénticos. .nojekyll es control de publicación, no se exige que sea una ruta pública.
+
+Cambios editoriales y de pruebas no regeneran innecesariamente el artefacto aprobado. release.json identifica la revisión de ejecución. Al promover otro artefacto debe actualizarse deliberadamente la referencia independiente del workflow externo. Reversión documentada, no ensayada en el proveedor.

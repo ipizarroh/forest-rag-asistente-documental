@@ -1,0 +1,133 @@
+{
+  "browser": "Playwright Chromium",
+  "mode": "external anonymous",
+  "timestamp": "2026-10-25T02:21:48.896Z",
+  "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/",
+  "source_commit": "7abc2a7133662ff811bfcdf0c09866cad31cc5ef",
+  "artifact_commit": "e0c6717d97470d5b3a0be1b2b251147c15ea1f57",
+  "viewports": [
+    "1440x1080",
+    "390x844"
+  ],
+  "checks": [
+    {
+      "id": "UI01",
+      "scenario": "anonymous desktop opens verified corpus",
+      "status": "PASS"
+    },
+    {
+      "id": "UI02",
+      "scenario": "suggested query returns real evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "UI03",
+      "scenario": "citation opens matching full source",
+      "status": "PASS"
+    },
+    {
+      "id": "UI04",
+      "scenario": "unanswerable query abstains",
+      "status": "PASS"
+    },
+    {
+      "id": "UI05",
+      "scenario": "hostile input executes no code or query requests",
+      "status": "PASS"
+    },
+    {
+      "id": "UI06",
+      "scenario": "document selector constrains evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "UI07",
+      "scenario": "per-tab pacing is enforced by UI",
+      "status": "PASS"
+    },
+    {
+      "id": "UI08",
+      "scenario": "no browser page errors",
+      "status": "PASS"
+    },
+    {
+      "id": "UI09",
+      "scenario": "390px mobile layout and query",
+      "status": "PASS"
+    },
+    {
+      "id": "UI10",
+      "scenario": "altered payload blocks UI before any evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "UI11",
+      "scenario": "public host exposes no backend or write route",
+      "status": "PASS"
+    },
+    {
+      "id": "UI12",
+      "scenario": "six HTTPS assets match the independently pinned artifact",
+      "status": "PASS",
+      "assets": [
+        {
+          "path": "index.html",
+          "status": 200,
+          "sha256": "9a057c9d7b8d945e9ca70f1fe2f335f0f72c8232f3924b111ca9d80f60de0a7e"
+        },
+        {
+          "path": "app.mjs",
+          "status": 200,
+          "sha256": "88b8fda5413c4c18c2c56da2f8ae3791e43d5c762dbc116ff83c2be886b3e5df"
+        },
+        {
+          "path": "engine.mjs",
+          "status": 200,
+          "sha256": "23b23956f51b8b36c1d6bf9f243559698f5fa54eeb90da569083c8a146f62d21"
+        },
+        {
+          "path": "style.css",
+          "status": 200,
+          "sha256": "29e560133af93ecde9056d923e3239ff37ccc6be1e017f2d77e2d396ed4111e8"
+        },
+        {
+          "path": "corpus.json",
+          "status": 200,
+          "sha256": "40aa13079580a1d121b0e86fb6bda0f33e004e93fd06910906d0b7ad899f9193"
+        },
+        {
+          "path": "release.json",
+          "status": 200,
+          "sha256": "694c2e4c88f8550379ac7c9b3541881ce63b2941915337f0e7e56153844afb9f"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/"
+    },
+    {
+      "method": "GET",
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/style.css"
+    },
+    {
+      "method": "GET",
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/app.mjs"
+    },
+    {
+      "method": "GET",
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/engine.mjs"
+    },
+    {
+      "method": "GET",
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/release.json"
+    },
+    {
+      "method": "GET",
+      "url": "https://ipizarroh.github.io/forest-rag-asistente-documental/corpus.json"
+    }
+  ]
+}

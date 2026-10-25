@@ -5,7 +5,7 @@
 
 ForestRAG es un prototipo personal para consultar información técnica forestal. Combina búsqueda documental, evidencia verificable y un laboratorio de permisos.
 
-**Candidata de demo pública:** implementada con documentos ficticios y búsqueda léxica en navegador; aún sin URL publicada. [Estado de versiones](PROJECT_STATUS.md) · [Cómo revisarla](docs/probar-demo-publica.md).
+**[Probar ForestRAG online](https://ipizarroh.github.io/forest-rag-asistente-documental/)** - demo pública con tres documentos ficticios, búsqueda de evidencia y citas. Se abre sin registro ni instalación. [Estado y límites](PROJECT_STATUS.md) · [Guía de uso](docs/probar-demo-publica.md).
 
 [Cómo probarlo](#cómo-probarlo) · [Seguridad documental](#seguridad-documental) · [Documentación técnica](#para-profundizar)
 
@@ -64,7 +64,9 @@ El laboratorio prueba ese principio con datos ficticios e intentos de manipulaci
 
 ## Cómo probarlo
 
-Necesitas Python y una copia de esta versión del proyecto. Sigue la [guía de instalación y demostraciones](docs/probar-forestrag.md) para preparar el entorno.
+**En navegador:** abre [la demo pública](https://ipizarroh.github.io/forest-rag-asistente-documental/) y elige una pregunta sugerida.
+
+**En tu computador:** necesitas Python y una copia de esta rama. Sigue la [guía de instalación y demostraciones](docs/probar-forestrag.md) para preparar el entorno.
 
 **Primera prueba: documento ficticio, sin descargar modelos.**
 
@@ -92,10 +94,10 @@ La guía también explica cómo preparar el corpus público y abrir la interfaz 
 
 ## Estado y próximos pasos
 
-Esta copia incorpora el trabajo local FREG-002 y el nuevo README. **Todavía no está publicada.** La rama pública [`freg-critical-001`](https://github.com/ipizarroh/forest-rag-asistente-documental/tree/freg-critical-001) corresponde al incremento anterior.
+La rama [freg-public-arch-001](https://github.com/ipizarroh/forest-rag-asistente-documental/tree/freg-public-arch-001) publica el código completo revisado de esta candidata, incluidos el prototipo local y el laboratorio. La demo web se despliega desde una rama separada de siete archivos estáticos. main conserva el corte histórico.
 
-- **Implementado:** recuperación documental local, trazabilidad y laboratorio sintético separado.
-- **En validación:** reproducibilidad en otros entornos, protección de la configuración y calidad de recuperación. FREG-002 conserva evidencia de 97 pruebas aprobadas en Linux; no es una certificación de seguridad.
+- **Implementado:** recuperación documental local, trazabilidad, laboratorio sintético separado y demo web pública de búsqueda léxica.
+- **Verificado en GitHub:** 106 pruebas aprobadas por entorno de Python, 13 pruebas de construcción, 15 de JavaScript y 12 comprobaciones externas de la demo, con vista móvil emulada. [Informe y evidencias](FORESTRAG_INFORME_PUBLICACION_GO_001.md). Las suites se solapan y no se suman como cobertura. La semántica y la generación online siguen pendientes.
 - **Después:** ciclo de actualización y retiro documental, identidad empresarial e integración de permisos; generación con un modelo real cuando se satisfagan sus dependencias.
 
 El [plan integrado](FORESTRAG_PLAN_MAESTRO_INTEGRADO.md) conserva las etapas y sus criterios de aceptación.
@@ -113,4 +115,4 @@ El [plan integrado](FORESTRAG_PLAN_MAESTRO_INTEGRADO.md) conserva las etapas y s
 
 Proyecto personal de [Ignacio Pizarro Hurtado](https://github.com/ipizarroh), independiente y sin afiliación, patrocinio ni aprobación de ARAUCO. No utiliza información interna de empresas.
 
-El corpus demostrativo utiliza texto de *El estado de los bosques del mundo 2024* (FAO), bajo CC BY 4.0, con atribución y alcance en [fuentes y licencias](docs/fuentes.md). No implica respaldo de FAO. Código y material ficticio original bajo [MIT](LICENSE).
+El corpus demostrativo utiliza texto de *El estado de los bosques del mundo 2024* (FAO), bajo CC BY 4.0, con atribución y alcance en [fuentes y licencias](docs/fuentes.md). No implica respaldo de FAO. Código bajo [MIT](LICENSE). El corpus ficticio de la demo estática se declara CC0-1.0 en su manifiesto; otros ejemplos conservan sus licencias documentadas.

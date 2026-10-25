@@ -15,3 +15,9 @@ No hay una URL pública verificada mientras no se habilite Pages y se complete l
 
 ## Reversión preparada
 Identificar el SHA desplegado y conservar el recibo. Si hay exposición indebida, deshabilitar Pages; corregir en una nueva revisión sin borrar historia. Para volver a código anterior, reconstruir con corpus/políticas vigentes, repetir CI y comprobar externamente consultas/citas antes de promover. No restaurar documentos retirados mediante un paquete antiguo.
+
+## Resultado verificado
+
+PUBLICADO: https://ipizarroh.github.io/forest-rag-asistente-documental/
+
+Fuente web 7abc2a7133662ff811bfcdf0c09866cad31cc5ef; artefacto e0c6717d97470d5b3a0be1b2b251147c15ea1f57. Despliegue 40153806543 success. Pruebas a4426a611077453031128c31a64e45b9fc45d86c, CI y navegador externo PASS. main sin cambios. [Informe](FORESTRAG_INFORME_PUBLICACION_GO_001.md). El snapshot revisado fue aceptado.
