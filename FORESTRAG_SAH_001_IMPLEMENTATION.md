@@ -14,9 +14,9 @@ Los respaldos de contenido sólo contienen documentos y fragmentos: no identidad
 
 ## Evidencia nueva
 
-18 pruebas funcionales ejecutadas con unittest y NumPy 2.3.5. Cubren revisión exacta, reclasificación, falta de autorización, aislamiento, restricción por defecto, contexto sin canarios prohibidos, retirada, concesiones/sesiones revocadas, identidad deshabilitada, versiones obsoletas, borrado lógico, reparación positiva de contenido vigente, rollback completo del índice incluso tras reiniciar, alteración de políticas/esquema, falta de autoridad, snapshot sin tablas de identidad y hash incorrecto antes de parsear.
+22 pruebas funcionales ejecutadas con unittest y NumPy 2.3.5. Cubren revisión exacta, reclasificación, falta de autorización, aislamiento, restricción por defecto, contexto sin canarios prohibidos, retirada, concesiones/sesiones revocadas, identidad deshabilitada, versiones obsoletas, borrado lógico, reparación positiva de contenido vigente, rollback completo del índice incluso tras reiniciar, alteración de políticas/esquema, falta de autoridad, snapshot sin tablas de identidad y hash incorrecto antes de parsear.
 
-También se ejecuta una regresión del SecurityLab anterior. La suite histórica pytest completa sigue siendo una obligación distinta: no se afirma que 18 pruebas sustituyan todos sus contratos.
+También se ejecuta una regresión del SecurityLab anterior. La suite histórica pytest completa sigue siendo una obligación distinta: no se afirma que 22 pruebas sustituyan todos sus contratos.
 
 Se corrigieron manejadores SQLite abiertos en los tests y se usó un directorio temporal autorizado, fuera de la carpeta sincronizada. Los intentos fallidos iniciales no se cuentan como verificación.
 
@@ -31,3 +31,5 @@ Se corrigieron manejadores SQLite abiertos en los tests y se usó un directorio 
 - No hay garantía de borrar copias ya descargadas ni datos de backups anteriores.
 
 A2-03/A3-02 avanzan en laboratorio, sin cerrar todo A2/A3 ni habilitar datos reales. Siguiente trabajo: auditar recuperación de fallos, regresión completa del nuevo esquema y provisión verificable de la autoridad en entorno aislado.
+
+Revisión adicional: se comprobó interrupción entre commit y sello (falla cerrada), reapertura con revocación vigente y checksum recalculado por un escritor del índice. Una prueba de límite confirma que restaurar ambos archivos bajo control del operador puede reactivar el estado previo: ese adversario está excluido. Auditoría, uso e historial operativos no están sellados; no se afirma inmutabilidad forense de esos registros.

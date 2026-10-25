@@ -2,6 +2,7 @@ name: Public demo live checks
 on:
   push:
     branches: ["freg-public-arch-001"]
+    paths: ["public_demo/**", ".github/workflows/public-demo-live.yml"]
 permissions:
   contents: read
 jobs:
@@ -17,7 +18,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
-          ref: e0c6717d97470d5b3a0be1b2b251147c15ea1f57
+          ref: 6a317f814b0e68d3c04f47fe6df43616dfa76a9b
           path: artifact
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
@@ -33,5 +34,14 @@ jobs:
         env:
           NODE_PATH: ${{ github.workspace }}/source/public_demo/browser_tests/node_modules
           FORESTRAG_EXPECTED_ARTIFACT: ${{ github.workspace }}/artifact
+          FORESTRAG_EXPECTED_SOURCE: 247bf18ad65457a0707653e22ee59b7dbde9bee4
+          FORESTRAG_EXPECTED_ARTIFACT_COMMIT: 6a317f814b0e68d3c04f47fe6df43616dfa76a9b
           FORESTRAG_LIVE_RESULT: ${{ runner.temp }}/forestrag-live.json
         run: node public_demo/test_live.cjs
+      - name: External catalog, filters and mobile acceptance
+        working-directory: source
+        env:
+          NODE_PATH: ${{ github.workspace }}/source/public_demo/browser_tests/node_modules
+          FORESTRAG_UX_URL: https://ipizarroh.github.io/forest-rag-asistente-documental/
+          FORESTRAG_UX_RESULT: ${{ runner.temp }}/forestrag-ux-live.json
+        run: node public_demo/test_ux_browser.cjs

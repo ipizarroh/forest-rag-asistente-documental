@@ -75,11 +75,12 @@ for(const name of ["index.html","app.mjs","engine.mjs","style.css","corpus.json"
  publishedAssets.push({path:name,status:response.status(),sha256:hash(body)});
 }
 const manifest=JSON.parse(await fs.readFile(path.join(artifact,"release.json"),"utf8"));
-assert.equal(manifest.source_commit,"7abc2a7133662ff811bfcdf0c09866cad31cc5ef");
+assert.match(process.env.FORESTRAG_EXPECTED_SOURCE||"",/^[a-f0-9]{40}$/);
+assert.equal(manifest.source_commit,process.env.FORESTRAG_EXPECTED_SOURCE);
 assert.equal(manifest.source_dirty,false);
 checks.push({id:"UI12",scenario:"six HTTPS assets match the independently pinned artifact",status:"PASS",assets:publishedAssets});
 await probe.close();await browser.close();
-const result={browser:"Playwright Chromium",mode:"external anonymous",timestamp:new Date().toISOString(),url:"https://ipizarroh.github.io/forest-rag-asistente-documental/",source_commit:manifest.source_commit,artifact_commit:"e0c6717d97470d5b3a0be1b2b251147c15ea1f57",viewports:["1440x1080","390x844"],checks,errors,requests};
+const result={browser:"Playwright Chromium",mode:"external anonymous",timestamp:new Date().toISOString(),url:"https://ipizarroh.github.io/forest-rag-asistente-documental/",source_commit:manifest.source_commit,artifact_commit:process.env.FORESTRAG_EXPECTED_ARTIFACT_COMMIT,viewports:["1440x1080","390x844"],checks,errors,requests};
 if(process.env.FORESTRAG_LIVE_RESULT)await fs.writeFile(process.env.FORESTRAG_LIVE_RESULT,JSON.stringify(result,null,2));
 console.log("FORESTRAG_LIVE_RESULT "+JSON.stringify(result));
 })().catch(e=>{console.error(e);process.exit(1)});

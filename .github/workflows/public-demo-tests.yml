@@ -2,6 +2,7 @@ name: Public demo candidate checks
 on:
   push:
     branches: ["freg-public-arch-001"]
+    paths: ["public_demo/**", "src/forestrag/**", "tests/test_public_demo.py", "tests/test_zero_cost.py", "requirements*", ".github/workflows/**"]
   pull_request:
     paths: ["public_demo/**", "src/forestrag/**", "tests/test_public_demo.py", "requirements-lab-linux-py312.lock", ".github/workflows/public-demo-tests.yml"]
 permissions:

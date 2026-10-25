@@ -1,0 +1,34 @@
+{
+  "runtime_source_sha": "247bf18ad65457a0707653e22ee59b7dbde9bee4",
+  "artifact_sha": "6a317f814b0e68d3c04f47fe6df43616dfa76a9b",
+  "candidate_ci": {
+    "run": 40208861784,
+    "status": "success",
+    "python_build_tests": 13,
+    "node_tests": 32,
+    "browser_checks": 22
+  },
+  "full_suite": {
+    "run": 40208861912,
+    "python_versions": [
+      "3.11",
+      "3.12",
+      "3.12 locked"
+    ],
+    "tests_per_environment": 110,
+    "deselected": 4
+  },
+  "pages": {
+    "run": 40209330492,
+    "status": "success"
+  },
+  "postdeploy": "pending",
+  "local_engineering_sha": "c4b5be3b24b2e730cefbb810004b256dcb19291e",
+  "local_engineering_tests": 22,
+  "zero_cost": "existing public Pages / standard public Actions; no new paid resources or billing changes",
+  "rollback_reference": {
+    "old_artifact": "e0c6717d97470d5b3a0be1b2b251147c15ea1f57",
+    "same_corpus_and_policy": true,
+    "scope": "compatibility checked; no live rollback performed"
+  }
+}

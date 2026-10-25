@@ -12,7 +12,7 @@ Primero reproducir el recuperador semántico local existente, sin sustituirlo: O
 | ONNX/Transformers.js en navegador | Inferencia del visitante, sin factura cloud | WASM CPU como base; WebGPU opcional según soporte. Worker, descarga voluntaria y cancelación; no bloquear la UI | Segundo experimento aislado |
 | LLM local | Modelo abierto y runtime libre | Usa RAM/CPU/GPU propios, sin servicio siempre disponible. No exponer localhost mediante túneles | Primera validación generativa posterior |
 | WebLLM en navegador | Sin servidor de inferencia | WebGPU y memoria compatibles; pesos potencialmente grandes, arranque frío, batería y móvil limitantes. No garantía de razonamiento ni español suficiente | Opcional después de evaluación |
-| Spaces CPU Basic | Documentado como hardware gratuito | Suspensión por inactividad, CPU limitada, disco efímero y sin SLA. No se creó cuenta ni Space; no se verificó la prevención de upgrades en una cuenta real | Alternativa no activada |
+| Spaces CPU Basic | CPU Basic no tiene tarifa horaria, pero crear compute nuevo requiere plan pagado | Fuente oficial actual: nuevos Gradio/Docker requieren plan pagado; Static Spaces siguen gratuitos. No se creó cuenta ni Space | Descartado para backend a $0 |
 | Endpoints/GPUs/APIs por consumo | Riesgo de facturación | Créditos y pruebas gratuitas no satisfacen la política permanente | Descartado |
 
 ## Modelos y licencias
@@ -45,3 +45,5 @@ No están instalados aquí ONNX Runtime, tokenizer, Hugging Face Hub, Ollama ni 
 - [Spaces: hardware](https://huggingface.co/docs/hub/spaces-gpus).
 
 Inferencia de ingeniería: trasladar el cómputo al cliente evita el costo de un servidor propio, pero traslada descarga y recursos al visitante; no garantiza disponibilidad o calidad.
+
+Comprobación económica adicional: el 25-10-2026 se verificó en Spaces Overview y Using GPU Spaces que el cómputo nuevo requiere plan pagado. No se confunde «Free» de la fila de hardware con acceso gratuito a la modalidad de cómputo.

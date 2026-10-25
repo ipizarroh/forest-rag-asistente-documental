@@ -20,7 +20,7 @@ La red del entorno bloqueó clone, descarga de dependencias y navegador localhos
 
 ## D. Seguridad
 
-FREG-SAH-001 añade en una rama local independiente revisión documental, retirada, restauración de contenido conservando política vigente y un sello separado del índice. 18 pruebas funcionales locales PASS. [Alcance, supuestos y pendientes](FORESTRAG_SAH_001_IMPLEMENTATION.md). No se publica el nuevo componente protegido ni se cierra el gate de host.
+FREG-SAH-001 añade en una rama local independiente revisión documental, retirada, restauración de contenido conservando política vigente y un sello separado del índice. 22 pruebas funcionales locales PASS. [Alcance, supuestos y pendientes](FORESTRAG_SAH_001_IMPLEMENTATION.md). No se publica el nuevo componente protegido ni se cierra el gate de host.
 
 ## E. Presupuesto y arquitectura futura
 

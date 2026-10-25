@@ -37,3 +37,5 @@ Comparar árboles exactos y contratos de cada componente; separar el cambio púb
 ## Reversión pública
 
 Revertir código mediante un nuevo commit descendiente en gh-pages, conservando el corpus y política actualmente aprobados. No mover la rama a un paquete antiguo si eso reintroduciría documentos retirados. Para este incremento el corpus no cambió: puede conservarse el paquete previo como referencia, pero debe verificarse su compatibilidad con el manifiesto y política actuales antes de servirlo. Validar hashes, catálogo, abstención y móvil después de cualquier reversión.
+
+Corte NEXT-001: runtime fuente 247bf18ad65457a0707653e22ee59b7dbde9bee4, artefacto 6a317f814b0e68d3c04f47fe6df43616dfa76a9b, ingeniería local c4b5be3b24b2e730cefbb810004b256dcb19291e. El árbol local preparado coincidió exactamente con el árbol remoto cf7c546fb5a2f1547daed5e9f06ded8125eab528; release.json registra esa procedencia recuperada. No se afirma que el snapshot local contenga toda la historia remota.

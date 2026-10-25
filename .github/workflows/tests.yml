@@ -1,6 +1,7 @@
 name: Tests
 on:
   push:
+    paths: ['src/**', 'app/**', 'tests/**', 'public_demo/**', 'pyproject.toml', 'requirements*', '.github/workflows/**']
   pull_request:
 permissions:
   contents: read

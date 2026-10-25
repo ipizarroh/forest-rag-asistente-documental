@@ -5,7 +5,7 @@
   "node_baseline_passed": 15,
   "node_candidate_passed": 32,
   "zero_cost_guard_tests_passed": 4,
-  "sah_local_unittest_passed": 18,
+  "sah_local_unittest_passed": 22,
   "local_graphical_checks": "BLOCKED: network access denied, not counted as PASS",
   "semantic_llm": "NOT_EXECUTED",
   "host_acl": "NOT_VERIFIED"
