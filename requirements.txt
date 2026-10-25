@@ -1,3 +1,0 @@
-# Instalación completa del prototipo; Python 3.11 o superior.
--e .[semantic,ui,dev]
-

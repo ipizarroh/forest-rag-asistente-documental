@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "candidate_version": "demo-0.1.0-rc.1",
+  "increment": "FREG-PUBLIC-ARCH-001",
+  "engine": "lexical-sha256-512-v1",
+  "policy_version": "public-synthetic-only-v1",
+  "database_schema": null,
+  "model_revision": null,
+  "chunking": {
+    "max_words": 55,
+    "overlap": 10
+  },
+  "limits": {
+    "query_characters": 320,
+    "query_terms": 64,
+    "documents": 12,
+    "chunks": 200,
+    "payload_bytes": 1000000
+  },
+  "threshold": 0.2,
+  "top_k": 3,
+  "retrieval_strategy": "cosine-plus-distinct-overlap-v1",
+  "source_commit": "7abc2a7133662ff811bfcdf0c09866cad31cc5ef",
+  "source_dirty": false,
+  "corpus_version": "synthetic-2026-10-24-v1",
+  "source_inputs": {
+    "public_demo/build.py": "bde747b86e4820bdb3ae6459018efaa6b7589d045cca897221bbf0b4754a3fce",
+    "public_demo/release-spec.json": "516235202e9c1601e2d1f9b3ccb8420c392d438ef232c9a60bdaa50236bbc57e",
+    "public_demo/corpus.json": "bb827acb4d85e547dff70d49f0ade94a88d0dc63d58d0fbaf599497cfcf87553",
+    "src/forestrag/embeddings.py": "41e9429f5b1947d65f0310661973e2655e058bd29b4c8711842d5a4936cb1d98",
+    "src/forestrag/preprocessing.py": "98db938a9c9ff2fef8e53f32fb71f4d0277497777eb4ed7de5edd2a0a9b00b4e",
+    "src/forestrag/models.py": "4d00e1b85be318296009d97aae74d7d63fdeeb62e2db050a2d4d12f11de1d6bd",
+    "requirements-lab-linux-py312.lock": "f1c3f74841313ec4b5f7e1307a9bf39674f4fddfbf2109d47ad339b516ddb04b",
+    "public_demo/web/index.html": "9a057c9d7b8d945e9ca70f1fe2f335f0f72c8232f3924b111ca9d80f60de0a7e",
+    "public_demo/web/style.css": "29e560133af93ecde9056d923e3239ff37ccc6be1e017f2d77e2d396ed4111e8",
+    "public_demo/web/engine.mjs": "23b23956f51b8b36c1d6bf9f243559698f5fa54eeb90da569083c8a146f62d21",
+    "public_demo/web/app.mjs": "88b8fda5413c4c18c2c56da2f8ae3791e43d5c762dbc116ff83c2be886b3e5df"
+  },
+  "build_runtime": {
+    "python": "3.12.3",
+    "numpy": "2.3.5"
+  },
+  "runtime_dependencies": [],
+  "generative_model": null,
+  "files": {
+    ".nojekyll": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "app.mjs": {
+      "sha256": "88b8fda5413c4c18c2c56da2f8ae3791e43d5c762dbc116ff83c2be886b3e5df",
+      "bytes": 3129
+    },
+    "corpus.json": {
+      "sha256": "40aa13079580a1d121b0e86fb6bda0f33e004e93fd06910906d0b7ad899f9193",
+      "bytes": 10146
+    },
+    "engine.mjs": {
+      "sha256": "23b23956f51b8b36c1d6bf9f243559698f5fa54eeb90da569083c8a146f62d21",
+      "bytes": 6337
+    },
+    "index.html": {
+      "sha256": "9a057c9d7b8d945e9ca70f1fe2f335f0f72c8232f3924b111ca9d80f60de0a7e",
+      "bytes": 4271
+    },
+    "style.css": {
+      "sha256": "29e560133af93ecde9056d923e3239ff37ccc6be1e017f2d77e2d396ed4111e8",
+      "bytes": 4697
+    }
+  }
+}
