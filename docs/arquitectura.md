@@ -1,5 +1,7 @@
 # Arquitectura y decisiones
 
+La sección inicial describe la arquitectura de la rama pública. La evolución hacia diez capas se resume al final y se vincula con el [estado y roadmap](ESTADO_Y_ROADMAP.md).
+
 Prototipo individual, local y modular. Recuperación extractiva por defecto; generación mediante adaptador opcional.
 
 ~~~mermaid
@@ -41,3 +43,21 @@ Reservar aproximadamente 2 GB de disco y 4 GB de RAM para instalación, caché e
 
 No se contrataron APIs, dominios, servicios cloud ni infraestructura. Internet sólo para preparación y enlaces; el índice preparado se consulta localmente. GCP queda para evaluación futura con presupuesto y autorización.
 
+## Arquitectura objetivo en diez capas
+
+| Capa | Responsabilidad | Estado |
+|---|---|---|
+| 1. Biblioteca, permisos e integridad | Alcance de la fuente, original, SHA-256, permisos y vigencia. | La rama pública usa un manifiesto de fuentes. Biblioteca y versionado ampliados en laboratorio. |
+| 2. Extracción y comprensión | Extraer texto y localizar fórmulas, tablas y orden de lectura. | pypdf público. Docling y OCR en laboratorio, con límites de fidelidad. |
+| 3. Normalización y estructura | Representar páginas, bloques y fragmentos con sus relaciones. | Fragmentos por página publicados. JSON, Markdown derivado y fragmentación jerárquica experimentales. |
+| 4. Recuperación léxica y semántica | Proponer candidatos a partir de palabras y significado. | Demo léxica y búsqueda por coseno en la rama pública. SQLite FTS5 en laboratorio. RRF como línea de evaluación. |
+| 5. Ranking y selección | Ordenar y escoger evidencia, con límites de cobertura y latencia. | Coseno y umbral publicados. Rerankers en el roadmap. |
+| 6. Suficiencia documental | Identificar cobertura, contradicciones y ausencia de apoyo. | Abstención extractiva inicial publicada. Suficiencia integral por evaluar. |
+| 7. Generación local | Explicar con apoyo en los pasajes admitidos. | Contrato Ollama simulado en la rama pública. Inferencia Qwen3 aislada reportada en laboratorio. |
+| 8. Verificación y atribución | Conservar referencia al original y comprobar apoyo por afirmación. | Fuentes y páginas publicadas. Autenticación reforzada en laboratorio y verificación semántica integral pendiente. |
+| 9. Evaluación, regresión y observabilidad | Registrar resultados, errores y recursos para comparar cambios. | Evaluación inicial pública. Instrumentación y herramientas estadísticas en laboratorio. |
+| 10. Interfaz y experiencia | Consultar, mostrar alcance y ofrecer acceso a los pasajes. | CLI y Streamlit publicados. Integración objetivo por validar. |
+
+Seguridad, evaluación científica y funcionamiento básico cruzan todas las capas. El desarrollo parte de cimientos y contratos verificables y avanza hacia integración progresiva. El [estado y roadmap](ESTADO_Y_ROADMAP.md) define los criterios vigentes por etapa.
+
+El [caso de motivación profesional de octubre](alineacion_cargo.md) documenta el contexto del primer prototipo.

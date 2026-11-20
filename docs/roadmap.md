@@ -1,17 +1,5 @@
-# Roadmap — aproximadamente 21 días individuales
+# Roadmap de ForestRAG
 
-Horizonte orientativo, sin ejecución automática prometida.
+El [estado y roadmap](ESTADO_Y_ROADMAP.md) organiza el desarrollo en siete etapas, de ARCH-006 a ARCH-012. Describe el alcance demostrado, los criterios de salida y las verificaciones pendientes.
 
-| Días | Trabajo | Criterio de salida |
-|---|---|---|
-| 1–3 | Fundación | Repositorio, arquitectura, licencias y manifiesto. |
-| 4–7 | Recuperación | PDF, embeddings, SQLite, fuentes y CLI verificables. |
-| 8–10 | Calidad | Reranking/híbrido, fragmentación y preguntas reservadas; medir evidencia por fragmento. |
-| 11–14 | Generación | Inferencia real Ollama y revisión de cada afirmación frente a su fuente. |
-| 15–17 | Robustez | Inyección documental, versiones contradictorias, privacidad y dependencias. |
-| 18–21 | Presentación | Demo repetible, capturas reales y revisión externa del guion de entrevista. |
-
-Siguiente prioridad: evaluar fragmentos completos y entidades poco frecuentes como TreeGOER con preguntas nuevas. Después ampliar corpus autorizado y ejecutar un LLM local.
-
-GCP se evaluará sólo después, con presupuesto y permisos. GIS/SAP, predicción de fallas y agentes operacionales requieren un alcance propio.
-
+El [roadmap inicial de octubre](https://github.com/ipizarroh/forest-rag-asistente-documental/blob/eee8da5035340abef011357e5f85ad7b2fc34bc3/docs/roadmap.md) conserva el contexto del primer prototipo y su plan de trabajo.

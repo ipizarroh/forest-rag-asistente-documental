@@ -1,5 +1,7 @@
 # Metodología
 
+Este documento describe el recorrido del prototipo publicado. El diseño de experimentos, la estadística, la investigación de operaciones y los criterios de decisión se desarrollan en [Fundamentos y metodología](FUNDAMENTOS_Y_METODOLOGIA.md).
+
 1. Registrar fuente, permiso, licencia, hash y páginas autorizadas.
 2. Validar ruta, extensión, tamaño, firma y hash.
 3. Extraer por página; conservar posición física y etiqueta PDF.
@@ -19,4 +21,3 @@ El baseline léxico usa hashing determinista de palabras a 512 dimensiones, sin 
 El modo predeterminado no sintetiza respuestas. El adaptador Ollama separa instrucciones de contexto no confiable y no ofrece herramientas. Las pruebas simuladas verifican contrato y validación, no inferencia ni calidad factual.
 
 Validar IDs de citas no demuestra que la evidencia implique la afirmación. Esa fundamentación requiere evaluación humana y pruebas de alucinación.
-
