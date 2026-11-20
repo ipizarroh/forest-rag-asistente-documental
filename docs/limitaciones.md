@@ -1,5 +1,7 @@
 # Limitaciones
 
+Alcance del prototipo público documentado en octubre de 2026. El [estado y roadmap](ESTADO_Y_ROADMAP.md) distingue los avances y límites posteriores de laboratorio.
+
 - Corpus oficial de dos páginas de FAO 2024: verifica un pipeline, no una base industrial representativa.
 - Sin información interna de ARAUCO. Sin procedimientos reales de mantenimiento.
 - Sin OCR, tablas estructuradas ni gráficos. Varias columnas pueden alterar el orden de lectura.
@@ -11,4 +13,3 @@
 - Sin autenticación multiusuario, disponibilidad, monitoreo productivo, GIS, SAP ni cloud.
 - Límites de archivo no hacen segura la ingesta de PDF hostiles.
 - Sin certificación operacional ni sustitución de procedimientos oficiales.
-

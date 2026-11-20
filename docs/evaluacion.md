@@ -1,10 +1,12 @@
 # Evaluación reproducible
 
+Evaluación histórica del prototipo público. Las mediciones posteriores de laboratorio y sus límites se recogen por separado en [Estado y roadmap](ESTADO_Y_ROADMAP.md).
+
 Fecha de validación: 22/10/2026, America/Santiago. Resultados completos en evaluation_results.json; pruebas en test_results.json.
 
 ## Recuperación real
 
-Se descargó y verificó un PDF FAO de 132 páginas. Se indexaron únicamente páginas físicas 43 y 47, rotuladas 27 y 31: 33 fragmentos. Embeddings ONNX multilingües de 384 dimensiones, CPU. Revisión del modelo y hashes en embeddings.py.
+Se descargó y verificó un PDF FAO de 132 páginas. Se indexaron únicamente páginas físicas 43 y 47, rotuladas 27 y 31: 33 fragmentos. Embeddings ONNX multilingües de 384 dimensiones, CPU. Revisión del modelo y hashes en el [módulo de embeddings](../src/forestrag/embeddings.py).
 
 Conjunto de desarrollo: seis preguntas respondibles y cinco no respondibles, con respuestas de referencia y páginas esperadas. Top-k 3, umbral 0,5 definido antes de ejecutar la evaluación.
 

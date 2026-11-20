@@ -1,5 +1,7 @@
 # Seguridad
 
+Los controles de esta página corresponden a la rama pública. La cobertura experimental, los límites de Windows y las verificaciones pendientes se mantienen en el [estado de laboratorio](ESTADO_Y_ROADMAP.md).
+
 Aplicación individual en loopback con corpus público revisado. Sin autenticación ni permisos por documento: no exponer como servicio multiusuario con datos privados.
 
 | Riesgo | Control implementado | Límite |
@@ -18,4 +20,3 @@ Sin registro automático de preguntas en disco. La evaluación sí escribe su co
 Versiones directas fijadas; pesos y tokenizer verificados por revisión y hashes. Sin código remoto del modelo. CI con permiso de lectura y sin secretos. Las pruebas no son una auditoría integral. Pendientes: revisión de vulnerabilidades y bloqueo con hashes de dependencias transitivas.
 
 Producción requiere autorización documental antes de recuperar, autenticación, cifrado, respaldos, ingesta aislada, límites por usuario, observabilidad y pruebas adversariales. No se desplegó infraestructura.
-
